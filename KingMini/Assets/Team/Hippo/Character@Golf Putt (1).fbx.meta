@@ -25,7 +25,7 @@ ModelImporter:
     rigImportErrors: 
     rigImportWarnings: "Avatar Rig Configuration mis-match. Bone length in configuration
       does not match position in animation file:\n\t'Ankle_L' : position error =
-      3.222914 mm\n"
+      4.844500 mm\n"
     animationImportErrors: 
     animationImportWarnings: "\nClip 'mixamo.com' has import animation warnings that
       might lower retargeting quality:\nNote: Activate translation DOF on avatar
@@ -52,7 +52,7 @@ ModelImporter:
       lastFrame: 38
       wrapMode: 0
       orientationOffsetY: 0
-      level: 0
+      level: 0.133
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0

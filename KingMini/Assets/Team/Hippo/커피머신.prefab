@@ -30,7 +30,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3129318564513844736}
-  m_RootOrder: 3
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &425313653905047285
 BoxCollider:
@@ -76,7 +76,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1.4146}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 903801701801220053}
   - {fileID: 3129288061704503088}
+  - {fileID: 7712919352811090862}
   - {fileID: 3129212227281790394}
   - {fileID: 8173416417906270238}
   - {fileID: 7479040868022600117}
@@ -160,6 +162,8 @@ GameObject:
   - component: {fileID: 3104293573213875026}
   - component: {fileID: 3114071028594368202}
   - component: {fileID: 7047304684520302761}
+  - component: {fileID: 5123370926863773395}
+  - component: {fileID: 6922022366912457143}
   m_Layer: 0
   m_Name: SM_Prop_CoffeeMachine_01_Handle_02
   m_TagString: Untagged
@@ -174,14 +178,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3127364445153919070}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.17025335, y: 0.43502212, z: 0.14909019}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: 0.43414903, z: -0, w: 0.9008411}
+  m_LocalPosition: {x: 0.1796, y: 0.4350221, z: 0.1501}
+  m_LocalScale: {x: 1, y: 1, z: 0.69480497}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3129318564513844736}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 51.462, z: 0}
 --- !u!33 &3104293573213875026
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -245,6 +249,37 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.08, y: 0.06, z: 0.44450673}
   m_Center: {x: 0.00000005587935, y: -0.054568652, z: 0.16120842}
+--- !u!114 &5123370926863773395
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3127364445153919070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a380a56199b057046ac134175890f269, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Planet: {fileID: 7915761489056297717}
+  speed: 100
+--- !u!114 &6922022366912457143
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3127364445153919070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 909d917d73a63f940ac158d02e936645, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pushLayers:
+    serializedVersion: 2
+    m_Bits: 256
+  canPush: 1
+  strength: 5
 --- !u!1 &3127516926476769128
 GameObject:
   m_ObjectHideFlags: 0
@@ -257,6 +292,8 @@ GameObject:
   - component: {fileID: 3104426940989948766}
   - component: {fileID: 3112563340068491790}
   - component: {fileID: 2744014429923128538}
+  - component: {fileID: 6326665384403583967}
+  - component: {fileID: 7116696210833144559}
   m_Layer: 0
   m_Name: SM_Prop_CoffeeMachine_01_Handle_01
   m_TagString: Untagged
@@ -271,13 +308,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3127516926476769128}
-  m_LocalRotation: {x: -0, y: -0.0024656656, z: -0, w: 0.99999696}
-  m_LocalPosition: {x: -0.1737241, y: 0.43502212, z: 0.14909019}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0.0024656951, z: -0, w: 0.99999696}
+  m_LocalPosition: {x: -0.17372413, y: 0.4350221, z: 0.14170758}
+  m_LocalScale: {x: 1, y: 1, z: 0.6948049}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3129318564513844736}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: -0.283, z: 0}
 --- !u!33 &3104426940989948766
 MeshFilter:
@@ -342,6 +379,99 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.08, y: 0.085, z: 0.44450676}
   m_Center: {x: 0.0000009873521, y: -0.054568652, z: 0.16120844}
+--- !u!114 &6326665384403583967
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3127516926476769128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a380a56199b057046ac134175890f269, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Planet: {fileID: 7566956272044930928}
+  speed: 200
+--- !u!114 &7116696210833144559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3127516926476769128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 909d917d73a63f940ac158d02e936645, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pushLayers:
+    serializedVersion: 2
+    m_Bits: 256
+  canPush: 1
+  strength: 5
+--- !u!1 &7566956272044930928
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 903801701801220053}
+  m_Layer: 0
+  m_Name: "\uC624\uB978\uCABD"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &903801701801220053
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7566956272044930928}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.17372417, y: 0.4350221, z: 0.14909028}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3129318564513844736}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7915761489056297717
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7712919352811090862}
+  m_Layer: 0
+  m_Name: "\uC67C\uCABD"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7712919352811090862
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7915761489056297717}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.17025328, y: 0.4350221, z: 0.14909036}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3129318564513844736}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7939571504081029221
 GameObject:
   m_ObjectHideFlags: 0
@@ -372,7 +502,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3129318564513844736}
-  m_RootOrder: 2
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &8542585349852372682
 BoxCollider:
@@ -417,7 +547,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3129318564513844736}
-  m_RootOrder: 4
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &2785365417269929595
 BoxCollider:

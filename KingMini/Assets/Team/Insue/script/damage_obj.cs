@@ -5,6 +5,7 @@ using StarterAssets;
 
 public class damage_obj : MonoBehaviour
 {
+    public GameObject player;
     public GameObject player_mesh;
     public GameObject player_ragdoll;
     public GameObject controller;
@@ -30,7 +31,11 @@ public class damage_obj : MonoBehaviour
             is_death = true;
             player_mesh.SetActive(false);
             player_ragdoll.SetActive(true);
-            controller.GetComponent<ThirdPersonController>().enabled = false;
+            controller.GetComponent<ThirdPersonController>().MoveSpeed = 0;
+            controller.GetComponent<ThirdPersonController>().JumpHeight = 0;
+            controller.GetComponent<ThirdPersonController>().RotationSmoothTime = 100;
+            controller.GetComponent<ThirdPersonController>().LockCameraPosition = true;
+            player.GetComponent<ThirdPersonController>().CinemachineCameraTarget = player_ragdoll;
         }
     }
 }

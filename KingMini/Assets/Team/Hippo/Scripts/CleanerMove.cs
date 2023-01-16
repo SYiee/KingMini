@@ -18,7 +18,6 @@ public class CleanerMove : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log(agent.velocity);
 
         if (agent.velocity == Vector3.zero)
         {

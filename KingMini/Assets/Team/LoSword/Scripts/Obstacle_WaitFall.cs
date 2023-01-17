@@ -12,9 +12,10 @@ public class Obstacle_WaitFall : MonoBehaviour
     {
         Board = GetComponent<Rigidbody>();
     }
-    private void OnCollisionEnter(Collision collision)
+
+    private void OnTriggerEnter(Collider other)
     {
-        if (collision.gameObject.tag == "Player")
+        if (other.tag == "Player")
         {
             Debug.Log("Fall");
             Invoke("BoardFall", FallSec);

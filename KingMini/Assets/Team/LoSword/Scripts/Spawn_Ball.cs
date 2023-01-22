@@ -27,7 +27,6 @@ public class Spawn_Ball : MonoBehaviour
         {
             Instantiate(Ball, SpawnPoint, Quaternion.identity);
             IsCoolTime = true;
-            Debug.Log(5);
         }
         
         if(IsCoolTime)

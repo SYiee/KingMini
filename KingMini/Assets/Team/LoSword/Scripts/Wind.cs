@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Wind : MonoBehaviour
 {
-    Rigidbody rb;
+    public StarterAssets.ThirdPersonController control;
 
     void Start()
     {
@@ -18,15 +18,13 @@ public class Wind : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        rb = other.gameObject.GetComponent<Rigidbody>();
-        rb.AddForce(new Vector3(0f, 10f, 0f), ForceMode.Impulse);
-        Debug.Log(23);
+        //control.GetComponent<StarterAssets.ThirdPersonController>()._verticalVelocity += 10f;
+        //Debug.Log(23);
 
         if (other.tag == "Player")
         {
             Debug.Log(23);
-            rb = other.gameObject.GetComponent<Rigidbody>();
-            rb.AddForce(new Vector3(0f, 10f, 0f), ForceMode.Impulse);
+            control.GetComponent<StarterAssets.ThirdPersonController>()._verticalVelocity += 30f;
         }
     }
 }

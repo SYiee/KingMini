@@ -65,7 +65,6 @@ public class soccer_player : MonoBehaviour
             }//max각도보다 커지면 state를 1 ( down ) 으로
             if (transform.rotation.x * rot_dir < 0)
             {
-                print(transform.rotation.x * rot_dir);
                 state = 2;
                 transform.localEulerAngles = new Vector3(0, 0, 0);
             }//원위치로 돌아오면 move}

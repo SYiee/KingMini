@@ -5,7 +5,6 @@ using StarterAssets;
 
 public class damage_obj : MonoBehaviour
 {
-    public GameObject player;
     public GameObject player_mesh;
     public GameObject player_ragdoll;
     public GameObject controller;
@@ -24,9 +23,10 @@ public class damage_obj : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision other)
     {
-        if (is_death == false&& other.gameObject.tag=="Player")
+        print(other.gameObject.tag);
+        if (is_death == false && other.gameObject.tag == "Obstacle")
         {
             is_death = true;
             player_mesh.SetActive(false);
@@ -35,7 +35,25 @@ public class damage_obj : MonoBehaviour
             controller.GetComponent<ThirdPersonController>().JumpHeight = 0;
             controller.GetComponent<ThirdPersonController>().RotationSmoothTime = 100;
             controller.GetComponent<ThirdPersonController>().LockCameraPosition = true;
-            player.GetComponent<ThirdPersonController>().CinemachineCameraTarget = player_ragdoll;
+        }
+    }
+    private void OnTriggerStay(Collider other)
+    {
+        print(other.gameObject.tag);
+    }
+
+    private void OnControllerColliderHit(ControllerColliderHit other)
+    {
+        if (is_death == false && other.gameObject.tag == "Obstacle")
+        {
+            is_death = true;
+            player_mesh.SetActive(false);
+            player_ragdoll.SetActive(true);
+            controller.GetComponent<ThirdPersonController>().MoveSpeed = 0;
+            controller.GetComponent<ThirdPersonController>().JumpHeight = 0;
+            controller.GetComponent<ThirdPersonController>().RotationSmoothTime = 100;
+            controller.GetComponent<ThirdPersonController>().LockCameraPosition = true;
+            controller.GetComponent<ThirdPersonController>().CinemachineCameraTarget = player_ragdoll;
         }
     }
 }

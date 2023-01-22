@@ -23,7 +23,12 @@ public class PocketBall : MonoBehaviour
     {
         while (true)
         {
+
             int rand = Random.Range(0, RedBalls.Count);
+            while (RedBalls[rand] == null || RedBalls[rand].activeSelf == false) {
+                rand = Random.Range(0, RedBalls.Count);
+            }
+
             Vector3 l_vector = RedBalls[rand].transform.position - WhiteBall.transform.position;
             WhiteBall.transform.rotation = Quaternion.LookRotation(l_vector).normalized;
 

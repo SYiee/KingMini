@@ -1,11 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static ShowIfAttribute;
 
 public class Obstacle_WaitFall : MonoBehaviour
 {
     public float FallSec = 0.5f;
+
+    public bool canDestroy = true;
+
+    [ShowIf(ActionOnConditionFail.JustDisable, ConditionOperator.And, nameof(canDestroy))]
     public float DestroySec = 2f;
+    
     Rigidbody Board;
 
     void Start()
@@ -19,7 +25,9 @@ public class Obstacle_WaitFall : MonoBehaviour
         {
             Debug.Log("Fall");
             Invoke("BoardFall", FallSec);
-            Destroy(gameObject, DestroySec);
+
+            if(canDestroy)
+                Destroy(gameObject, DestroySec);
         }
     }
     void BoardFall()

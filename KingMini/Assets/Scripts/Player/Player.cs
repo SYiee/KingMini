@@ -47,13 +47,13 @@ public class Player : MonoBehaviour
     {
         InputManage();
 
+        Jump();
     }
 
     private void FixedUpdate()
     {
-        Jump();
         Move();
-
+        print(isJump);
         //idle+walk+run animation
         float percent = ((run) ? 1 : 0.5f) * moveDirection.magnitude;
         _animator.SetFloat("Speed", percent, 0.1f, Time.deltaTime);
@@ -81,7 +81,7 @@ public class Player : MonoBehaviour
         _rigidbody.position += moveDirection.normalized * finalSpeed * Time.deltaTime;
 
         //camera + Player Turn
-        if (isMove == false) //움직임이 없다
+        if (isMove == false) //움직임이 없을 때
         {
             Vector3 playerForwardRotationDir = Vector3.Scale(moveDirection, new Vector3(1, 0, 1));
             Quaternion newRotation = Quaternion.LookRotation(playerForwardRotationDir.normalized * finalSpeed * Time.deltaTime);
@@ -98,6 +98,7 @@ public class Player : MonoBehaviour
             _animator.SetBool("Jump", true);
             _rigidbody.AddForce(Vector3.up * jumpPower, ForceMode.Impulse);
             isJump = true;
+
         }
     }
     void Fall()
@@ -124,9 +125,7 @@ public class Player : MonoBehaviour
 
     private void OnCollisionExit(Collision collision)
     {
-        if (collision.gameObject.tag == "Floor")
-        {
-        }
+
     }
 
 }

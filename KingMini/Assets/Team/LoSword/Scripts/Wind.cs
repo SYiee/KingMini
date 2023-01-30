@@ -5,6 +5,7 @@ using UnityEngine;
 public class Wind : MonoBehaviour
 {
     public StarterAssets.ThirdPersonController control;
+    public float JumpForce = 30f;
 
     void Start()
     {
@@ -24,7 +25,7 @@ public class Wind : MonoBehaviour
         if (other.tag == "Player")
         {
             Debug.Log(23);
-            control.GetComponent<StarterAssets.ThirdPersonController>()._verticalVelocity += 30f;
+            control.GetComponent<StarterAssets.ThirdPersonController>()._verticalVelocity += JumpForce;
         }
     }
 }

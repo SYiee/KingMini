@@ -17,11 +17,11 @@ public class Teleport : MonoBehaviour
     }
     void OnTriggerEnter(Collider other)
     {
-        //Debug.Log(1);
+        Debug.Log(1);
         other.transform.position = Target.position;
         if (other.gameObject.tag == "Player")
         {
-            //Debug.Log(2);
+            Debug.Log(2);
             other.transform.position = Target.position;
         }
     }

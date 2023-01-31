@@ -27,11 +27,13 @@ public class damage_obj : MonoBehaviour
     {
         if (die_on_flat==true)
         {
+            /*
             if (transform.position.y < 0)
             {
                 print("d");
                 Die();
             }
+            */
         }
         if (is_death)
         {
@@ -48,13 +50,7 @@ public class damage_obj : MonoBehaviour
         print(other.gameObject.tag);
         if (is_death == false && other.gameObject.tag == "Obstacle")
         {
-            is_death = true;
-            player_mesh.SetActive(false);
-            player_ragdoll.SetActive(true);
-            controller.GetComponent<ThirdPersonController>().MoveSpeed = 0;
-            controller.GetComponent<ThirdPersonController>().JumpHeight = 0;
-            controller.GetComponent<ThirdPersonController>().RotationSmoothTime = 100;
-            controller.GetComponent<ThirdPersonController>().LockCameraPosition = true;
+            Die();
         }
     }
 

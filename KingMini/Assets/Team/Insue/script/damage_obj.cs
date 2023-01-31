@@ -57,10 +57,6 @@ public class damage_obj : MonoBehaviour
             controller.GetComponent<ThirdPersonController>().LockCameraPosition = true;
         }
     }
-    private void OnTriggerStay(Collider other)
-    {
-        print(other.gameObject.tag);
-    }
 
     private void OnControllerColliderHit(ControllerColliderHit other)
     {

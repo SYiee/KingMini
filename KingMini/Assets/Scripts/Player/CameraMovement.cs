@@ -29,7 +29,7 @@ public class CameraMovement : MonoBehaviour
         finalDistance = realCamera.localPosition.magnitude; //크기
 
         //마우스 커서 안보이게 + lock
-        Cursor.lockState = CursorLockMode.Locked;
+        //Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
 

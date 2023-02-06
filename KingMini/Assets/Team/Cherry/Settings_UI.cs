@@ -23,6 +23,7 @@ public class Settings_UI : MonoBehaviour
         // 다시 게임으로
         Time.timeScale = 1;
         gameObject.SetActive(false);
+        Cursor.visible = false;
     }
 
     public void GotoMainMenu()

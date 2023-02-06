@@ -16,11 +16,17 @@ public class Esc_UI : MonoBehaviour
         {
             is_pause = !is_pause;
 
-            // 게임 일시정지
-            if(is_pause)
+            // 게임 일시정지 & 마우스 커서 보이도록
+            if (is_pause)
+            {
                 Time.timeScale = 0;
+                Cursor.visible = true;
+            }
             else
+            {
                 Time.timeScale = 1;
+                Cursor.visible = false;
+            }
 
             // UI 켜기
             Settings.SetActive(is_pause);

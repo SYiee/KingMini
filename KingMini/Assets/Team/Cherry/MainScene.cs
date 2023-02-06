@@ -6,6 +6,29 @@ using UnityEngine.SceneManagement;
 public class MainScene : MonoBehaviour
 {
     // Start is called before the first frame update
+    public GameObject Title;
+
+    float time = 0;
+
+    private void Update()
+    {
+
+        if (time < 0.7f)
+        {
+            Title.transform.position = Title.transform.position + new Vector3(0, 0.3f, 0);
+        }
+        else
+        {
+            Title.transform.position = Title.transform.position + new Vector3(0,  -0.3f, 0);
+            if (time > 1.4f)
+            {
+                time = 0;
+            }
+        }
+
+        time += Time.deltaTime;
+    }
+
     public void NewGame()
     {
         SceneManager.LoadScene(2);

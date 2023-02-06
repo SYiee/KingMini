@@ -263,6 +263,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Planet: {fileID: 7915761489056297717}
   speed: 100
+  reverse: 0
 --- !u!114 &6922022366912457143
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -393,6 +394,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Planet: {fileID: 7566956272044930928}
   speed: 200
+  reverse: 1
 --- !u!114 &7116696210833144559
 MonoBehaviour:
   m_ObjectHideFlags: 0

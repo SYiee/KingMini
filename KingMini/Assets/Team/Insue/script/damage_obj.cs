@@ -10,17 +10,16 @@ public class damage_obj : MonoBehaviour
     public GameObject player_ragdoll;
     public GameObject controller;
 
+    [Header("Electric Shock Effect")]
+    public GameObject electricObject;
+    public bool electric = false;
+
     private bool is_death = false;
 
 
     [Header("Die on flat")]
     public bool die_on_flat = true;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()
@@ -62,16 +61,21 @@ public class damage_obj : MonoBehaviour
         }
     }
 
+    public void Electric(bool elec)
+    {
+        electric = elec;
+    }
     public void Die()
     {
         is_death = true;
         player_mesh.SetActive(false);
         player_ragdoll.SetActive(true);
-        controller.GetComponent<ThirdPersonController>().MoveSpeed = 0;
-        controller.GetComponent<ThirdPersonController>().JumpHeight = 0;
-        controller.GetComponent<ThirdPersonController>().RotationSmoothTime = 100;
-        controller.GetComponent<ThirdPersonController>().LockCameraPosition = true;
-        controller.GetComponent<ThirdPersonController>().CinemachineCameraTarget = player_ragdoll;
+        electricObject.SetActive(electric);
+        //controller.GetComponent<ThirdPersonController>().MoveSpeed = 0;
+        //controller.GetComponent<ThirdPersonController>().JumpHeight = 0;
+        //controller.GetComponent<ThirdPersonController>().RotationSmoothTime = 100;
+        //controller.GetComponent<ThirdPersonController>().LockCameraPosition = true;
+        //controller.GetComponent<ThirdPersonController>().CinemachineCameraTarget = player_ragdoll;
     }
 
 }

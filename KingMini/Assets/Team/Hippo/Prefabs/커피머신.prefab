@@ -163,7 +163,6 @@ GameObject:
   - component: {fileID: 3114071028594368202}
   - component: {fileID: 7047304684520302761}
   - component: {fileID: 5123370926863773395}
-  - component: {fileID: 6922022366912457143}
   m_Layer: 0
   m_Name: SM_Prop_CoffeeMachine_01_Handle_02
   m_TagString: Untagged
@@ -264,23 +263,6 @@ MonoBehaviour:
   Planet: {fileID: 7915761489056297717}
   speed: 100
   reverse: 0
---- !u!114 &6922022366912457143
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3127364445153919070}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 909d917d73a63f940ac158d02e936645, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pushLayers:
-    serializedVersion: 2
-    m_Bits: 256
-  canPush: 1
-  strength: 5
 --- !u!1 &3127516926476769128
 GameObject:
   m_ObjectHideFlags: 0
@@ -294,7 +276,6 @@ GameObject:
   - component: {fileID: 3112563340068491790}
   - component: {fileID: 2744014429923128538}
   - component: {fileID: 6326665384403583967}
-  - component: {fileID: 7116696210833144559}
   m_Layer: 0
   m_Name: SM_Prop_CoffeeMachine_01_Handle_01
   m_TagString: Untagged
@@ -395,23 +376,6 @@ MonoBehaviour:
   Planet: {fileID: 7566956272044930928}
   speed: 200
   reverse: 1
---- !u!114 &7116696210833144559
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3127516926476769128}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 909d917d73a63f940ac158d02e936645, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pushLayers:
-    serializedVersion: 2
-    m_Bits: 256
-  canPush: 1
-  strength: 5
 --- !u!1 &7566956272044930928
 GameObject:
   m_ObjectHideFlags: 0

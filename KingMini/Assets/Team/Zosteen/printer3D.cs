@@ -4,18 +4,17 @@ using UnityEngine;
 
 public class printer3D : MonoBehaviour
 {
-    public GameObject player;
-    public GameObject printerCover;
-    public Animator animator;
-    public ParticleSystem dust;
-    public Transform playerSpawn;
 
+    public GameObject player;
+    public ParticleSystem smoke;
+    public ParticleSystem ring;
+    public Transform playerSpawn;
 
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Player")
         {
-            animator.SetTrigger("coverDown");
+
             Invoke("printer3d", 0.5f);
         }
     }
@@ -23,17 +22,19 @@ public class printer3D : MonoBehaviour
     void printer3d()
     {
         player.SetActive(false);
-        dust.Play();
-        player.transform.localScale = new Vector3(1, 1, 0.1f);
+        smoke.Play();
+        player.transform.localScale = new Vector3(1, 1, 1);
+        player.GetComponent<CapsuleCollider>().enabled = true;
+        player.GetComponent<BoxCollider>().enabled = false;
         Invoke("Spawnplayer", 4f);
     }
 
     void Spawnplayer()
     {
-        dust.Stop();
+        smoke.Stop();
+        ring.Play();
         player.SetActive(true);
         player.transform.position = playerSpawn.position;
 
     }
-
 }

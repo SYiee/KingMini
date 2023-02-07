@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Tramp : MonoBehaviour
 {
-    private GameObject player;
+    public GameObject player;
     public float height;
     public float speed;
 

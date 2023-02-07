@@ -8,7 +8,7 @@ public class damage_obj : MonoBehaviour
 {
     public GameObject player_mesh;
     public GameObject player_ragdoll;
-    public GameObject controller;
+    public GameObject Camera;
 
     [Header("Electric Shock Effect")]
     public GameObject electricObject;
@@ -20,25 +20,34 @@ public class damage_obj : MonoBehaviour
     [Header("Die on flat")]
     public bool die_on_flat = true;
 
+    [Header("Death Manager")]
+    public GameObject death_manager;
+
+    private void Awake()
+    {
+       death_manager = FindObjectOfType<death_manage>().gameObject;
+    }
 
     // Update is called once per frame
     void Update()
     {
         if (die_on_flat==true)
         {
-            /*
+            
             if (transform.position.y < 0)
             {
-                print("d");
+               
                 Die();
             }
-            */
+            
         }
         if (is_death)
         {
             if(Input.GetKey(KeyCode.R))
             {
                 SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+                death_manager.transform.GetComponent<death_manage>().death_count++;
+                is_death = false;
             }
 
         }
@@ -71,6 +80,7 @@ public class damage_obj : MonoBehaviour
         player_mesh.SetActive(false);
         player_ragdoll.SetActive(true);
         electricObject.SetActive(electric);
+        //Camera.GetComponent<CameraMovement>().objectToFollow = player_ragdoll.transform;
         //controller.GetComponent<ThirdPersonController>().MoveSpeed = 0;
         //controller.GetComponent<ThirdPersonController>().JumpHeight = 0;
         //controller.GetComponent<ThirdPersonController>().RotationSmoothTime = 100;

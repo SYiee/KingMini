@@ -52,8 +52,8 @@ public class Player : MonoBehaviour
 
     private void FixedUpdate()
     {
+
         Move();
-        print(isJump);
         //idle+walk+run animation
         float percent = ((run) ? 1 : 0.5f) * moveDirection.magnitude;
         _animator.SetFloat("Speed", percent, 0.1f, Time.deltaTime);
@@ -73,11 +73,11 @@ public class Player : MonoBehaviour
 
     void Move()
     {
+        moveVec = new Vector3(hAxis, 0, vAxis).normalized; // 움직임이 있는지 확인하기 위한 변수
         isMove = (moveVec == Vector3.zero) ? true : false;
 
         //character move
         moveDirection = _camera.transform.forward * vAxis + _camera.transform.right * hAxis; //카메라가 바라보는 방향을 앞으로 설정
-        moveVec = new Vector3(hAxis, 0, vAxis).normalized; // 움직임이 있는지 확인하기 위한 변수
         _rigidbody.position += moveDirection.normalized * finalSpeed * Time.deltaTime;
 
         //camera + Player Turn
@@ -88,6 +88,14 @@ public class Player : MonoBehaviour
             _rigidbody.rotation = Quaternion.Slerp(transform.rotation, newRotation, Time.deltaTime * smoothness);
         }
 
+        //if (jDown && !isJump)
+        //{
+        //    _animator.SetBool("Grounded", false);
+        //    _animator.SetBool("Jump", true);
+        //    _rigidbody.AddForce(Vector3.up * jumpPower, ForceMode.Impulse);
+        //    isJump = true;
+        //}
+
     }
 
     void Jump()
@@ -96,6 +104,7 @@ public class Player : MonoBehaviour
         {
             _animator.SetBool("Grounded", false);
             _animator.SetBool("Jump", true);
+            _rigidbody.AddForce(Vector3.up * -_rigidbody.velocity.y, ForceMode.VelocityChange);
             _rigidbody.AddForce(Vector3.up * jumpPower, ForceMode.Impulse);
             isJump = true;
 

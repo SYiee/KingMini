@@ -9,6 +9,7 @@ public class MoveToghether : MonoBehaviour
     {
         //if(collision.gameObject.tag == "Player") 
         {
+            print(collision.gameObject.name);
             collision.transform.SetParent(transform);
         }
     }

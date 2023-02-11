@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Wind : MonoBehaviour
 {
-    public StarterAssets.ThirdPersonController control;
+    //public StarterAssets.ThirdPersonController control;
+    public Rigidbody rb;
     public float JumpForce = 30f;
 
     void Start()
@@ -25,7 +26,8 @@ public class Wind : MonoBehaviour
         if (other.tag == "Player")
         {
             Debug.Log(23);
-            control.GetComponent<StarterAssets.ThirdPersonController>()._verticalVelocity += JumpForce;
+            rb.AddForce(new Vector3(0, JumpForce, 0), ForceMode.Impulse);
+            //control.GetComponent<StarterAssets.ThirdPersonController>()._verticalVelocity += JumpForce;
         }
     }
 }

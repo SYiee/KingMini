@@ -34,7 +34,7 @@ public class damage_obj : MonoBehaviour
         if (die_on_flat==true)
         {
             
-            if (transform.position.y < 0)
+            if (transform.position.y < 1)
             {
                
                 Die();
@@ -79,7 +79,10 @@ public class damage_obj : MonoBehaviour
         is_death = true;
         player_mesh.SetActive(false);
         player_ragdoll.SetActive(true);
-        electricObject.SetActive(electric);
+        if (electric)
+        {
+            electricObject.SetActive(electric);
+        }
         //Camera.GetComponent<CameraMovement>().objectToFollow = player_ragdoll.transform;
         //controller.GetComponent<ThirdPersonController>().MoveSpeed = 0;
         //controller.GetComponent<ThirdPersonController>().JumpHeight = 0;

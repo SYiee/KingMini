@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem.Controls;
 
 public class Ball_Lanuch : MonoBehaviour
 {
@@ -13,6 +14,6 @@ public class Ball_Lanuch : MonoBehaviour
 
     void Update()
     {
-        gameObject.transform.Translate(new Vector3(0, 0, -1f) * Speed);
+        gameObject.transform.Translate(new Vector3(0, 0, -1f) *  Speed);
     }
 }

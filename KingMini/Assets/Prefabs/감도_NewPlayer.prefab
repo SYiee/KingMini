@@ -3530,8 +3530,8 @@ MonoBehaviour:
     walkByDefault: 0
     rotateWithCamera: 0
     walkSpeed: 2
-    runningSpeed: 3
-    sprintSpeed: 5
+    runningSpeed: 4
+    sprintSpeed: 6
   strafeSpeed:
     movementSmooth: 6
     animationSmooth: 0.2
@@ -3619,7 +3619,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08b678390978e7f47a6b8a3a0de45fcc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player_mesh: {fileID: 1648097663735547083}
+  player_mesh: {fileID: 1648097663507038793}
   player_ragdoll: {fileID: 8156518002588058832}
   Camera: {fileID: 1648097663584276323}
   electricObject: {fileID: 0}
@@ -4465,8 +4465,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1648097664235409915}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6758,8 +6758,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8156518002588058832}
-  m_LocalRotation: {x: -0, y: 0.06789147, z: -0, w: 0.99769276}
-  m_LocalPosition: {x: -114.45354, y: 96.39259, z: -84.00578}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

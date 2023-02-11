@@ -2,12 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using StarterAssets;
+using Invector.vCharacterController;
 
 public class damage_obj : MonoBehaviour
 {
     public GameObject player_mesh;
     public GameObject player_ragdoll;
+    public GameObject player_controller;
     public GameObject Camera;
 
     [Header("Electric Shock Effect")]
@@ -34,7 +35,7 @@ public class damage_obj : MonoBehaviour
         if (die_on_flat==true)
         {
             
-            if (transform.position.y < 1)
+            if (transform.position.y < 1 && is_death == false)
             {
                
                 Die();
@@ -77,18 +78,16 @@ public class damage_obj : MonoBehaviour
     public void Die()
     {
         is_death = true;
-        player_mesh.SetActive(false);
         player_ragdoll.SetActive(true);
+        player_ragdoll.transform.SetParent(null);
+        player_controller.transform.SetParent(player_ragdoll.transform);
+        player_mesh.SetActive(false);
         if (electric)
         {
             electricObject.SetActive(electric);
         }
-        //Camera.GetComponent<CameraMovement>().objectToFollow = player_ragdoll.transform;
-        //controller.GetComponent<ThirdPersonController>().MoveSpeed = 0;
-        //controller.GetComponent<ThirdPersonController>().JumpHeight = 0;
-        //controller.GetComponent<ThirdPersonController>().RotationSmoothTime = 100;
-        //controller.GetComponent<ThirdPersonController>().LockCameraPosition = true;
-        //controller.GetComponent<ThirdPersonController>().CinemachineCameraTarget = player_ragdoll;
+        //player_controller.GetComponent<vThirdPersonInput>().enabled = false;
+        //player_controller.GetComponent<vThirdPersonController>().enabled = false;
+        Camera.GetComponent<vThirdPersonCamera>().SetMainTarget(player_ragdoll.transform);
     }
-
 }

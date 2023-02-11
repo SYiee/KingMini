@@ -3546,7 +3546,7 @@ MonoBehaviour:
   jumpTimer: 0.3
   jumpHeight: 6
   airSpeed: 5
-  airSmooth: 6
+  airSmooth: 100
   extraGravity: -10
   limitFallVelocity: -15
   groundLayer:
@@ -3621,6 +3621,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player_mesh: {fileID: 1648097663507038793}
   player_ragdoll: {fileID: 8156518002588058832}
+  player_controller: {fileID: 1648097663735547083}
   Camera: {fileID: 1648097663584276323}
   electricObject: {fileID: 0}
   electric: 0
@@ -6070,8 +6071,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7171727882057571455}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

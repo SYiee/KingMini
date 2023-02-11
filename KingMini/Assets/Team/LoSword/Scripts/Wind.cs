@@ -25,8 +25,9 @@ public class Wind : MonoBehaviour
 
         if (other.tag == "Player")
         {
-            Debug.Log(23);
-            rb.AddForce(new Vector3(0, JumpForce, 0), ForceMode.Impulse);
+            Rigidbody rigid = other.GetComponent<Rigidbody>();
+            //Debug.Log(23);
+            rigid.AddForce(new Vector3(0, JumpForce, 0), ForceMode.Impulse);
             //control.GetComponent<StarterAssets.ThirdPersonController>()._verticalVelocity += JumpForce;
         }
     }

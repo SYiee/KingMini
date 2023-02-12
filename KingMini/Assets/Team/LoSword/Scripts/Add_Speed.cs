@@ -18,7 +18,7 @@ public class Add_Speed : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Ball")
+        if (other.gameObject.tag == "Obstacle")
         {
             other.GetComponent<Ball_Lanuch>().Speed += 0.07f;
         }

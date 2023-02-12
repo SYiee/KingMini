@@ -8,7 +8,7 @@ public class Ball_Launch2 : MonoBehaviour
 
     void Start()
     {
-        Destroy(gameObject, 3f);
+        Destroy(gameObject, 2.5f);
     }
 
     void Update()

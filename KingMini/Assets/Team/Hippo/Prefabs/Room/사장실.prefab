@@ -2507,7 +2507,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7483468804838192145}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1.5799198, y: 0.66820115, z: 1.6391993}
@@ -2524,7 +2524,7 @@ Animator:
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 88e894624bba9b844a1ef06e12bc979d, type: 2}
   m_CullingMode: 0
-  m_UpdateMode: 0
+  m_UpdateMode: 1
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
@@ -2550,7 +2550,7 @@ MonoBehaviour:
   right: 0
   forward: 0
   back: 0
-  power: 5
+  power: 1000
 --- !u!1001 &3707671971783961898
 PrefabInstance:
   m_ObjectHideFlags: 0

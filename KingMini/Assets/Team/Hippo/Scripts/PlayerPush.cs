@@ -16,6 +16,7 @@ public class PlayerPush : MonoBehaviour
     public float power;
 
     Vector3 vec;
+    bool canJump = true;
 
     private void Start()
     {
@@ -31,14 +32,23 @@ public class PlayerPush : MonoBehaviour
         vec *= power;
     }
 
-    //private void OnCollisionEnter(Collision collision)
-    //{
-    //    if (collision.gameObject.tag == "Player")
-    //    {
-    //        Rigidbody rigid = collision.gameObject.GetComponentInChildren<Rigidbody>();
-    //        rigid.AddForce(vec, ForceMode.Impulse);
-    //    }
-    //}
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (!canJump) return;
+        if (collision.gameObject.tag == "Player")
+        {
+            canJump = false;
+            Invoke("JumpOut", 0.5f);
+            Debug.Log("jump!");
+            Rigidbody rigid = collision.gameObject.GetComponentInChildren<Rigidbody>();
+            rigid.AddForce(vec, ForceMode.VelocityChange);
+        }
+    }
+
+    void JumpOut()
+    {
+        canJump = true;
+    }
 
     //private void OnTriggerEnter(Collider other)
     //{
@@ -57,14 +67,14 @@ public class PlayerPush : MonoBehaviour
     //    }
     //}
 
-    private void OnTriggerStay(Collider other)
-    {
-        if (other.tag == "Player")
-        {
-            Rigidbody rigid = other.gameObject.GetComponentInChildren<Rigidbody>();
-            rigid.AddForce(vec, ForceMode.Impulse);
-        }
-    }
+    //private void OnTriggerEnter(Collider other)
+    //{
+    //    //if (other.tag == "Player")
+    //    //{
+    //        Rigidbody rigid = other.gameObject.GetComponentInChildren<Rigidbody>();
+    //        rigid.AddForce(vec, ForceMode.Impulse);
+    //    //}
+    //}
 
 
 }

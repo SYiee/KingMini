@@ -34,12 +34,13 @@ public class PlayerPush : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        Debug.Log("jump!");
         if (!canJump) return;
         if (collision.gameObject.tag == "Player")
         {
             canJump = false;
             Invoke("JumpOut", 0.5f);
-            Debug.Log("jump!");
+            
             Rigidbody rigid = collision.gameObject.GetComponentInChildren<Rigidbody>();
             rigid.AddForce(vec, ForceMode.VelocityChange);
         }

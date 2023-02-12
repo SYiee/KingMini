@@ -121,7 +121,7 @@ namespace Invector.vCharacterController
 
         protected virtual void SprintInput()
         {
-            if (Input.GetKeyDown(sprintInput))
+            if (Input.GetKey(sprintInput) && Input.GetKey(KeyCode.W))
                 cc.Sprint(true);
             else if (Input.GetKeyUp(sprintInput))
                 cc.Sprint(false);

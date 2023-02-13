@@ -28,7 +28,6 @@ public class launch_A_to_B : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-           print("dd");
            GameObject ball = Instantiate(projectile);
             ball.transform.position = A.transform.position;
            Vector3 dir = new Vector3(B.transform.position.x, B.transform.position.y + 2, B.transform.position.z) - A.transform.position;

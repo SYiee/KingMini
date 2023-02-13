@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 4469277293865185802}
   m_Layer: 0
   m_Name: P_Ball1
-  m_TagString: PocketBall
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

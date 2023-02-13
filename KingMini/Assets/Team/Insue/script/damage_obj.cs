@@ -18,8 +18,6 @@ public class damage_obj : MonoBehaviour
     public GameObject electricObject;
     public bool electric = false;
 
-    private bool is_death = false;
-
 
     [Header("Die on flat")]
     public bool die_on_flat = true;
@@ -27,6 +25,9 @@ public class damage_obj : MonoBehaviour
     [Header("Death Manager")]
     public GameObject death_manager;
     public TextMeshProUGUI Death_UI;  // 몇 번 죽었는지 표시
+
+
+    private bool is_death = false;
 
     private void Awake()
     {
@@ -39,7 +40,7 @@ public class damage_obj : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (die_on_flat==true)
         {
@@ -51,17 +52,11 @@ public class damage_obj : MonoBehaviour
             }
             
         }
-        if (is_death)
-        {
-            if(Input.GetKey(KeyCode.R))
+            if(Input.GetKeyDown(KeyCode.R))
             {
-                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-                death_manager.transform.GetComponent<death_manage>().death_count++;
-                is_death = false;
-
+                Die();
             }
 
-        }
     }
 
     private void OnCollisionEnter(Collision other)
@@ -88,6 +83,11 @@ public class damage_obj : MonoBehaviour
 
     public void Die()
     {
+        StartCoroutine("die");
+    }
+
+    IEnumerator die()
+    {
         is_death = true;
         player_ragdoll.SetActive(true);
         player_ragdoll.transform.SetParent(null);
@@ -97,8 +97,11 @@ public class damage_obj : MonoBehaviour
         {
             electricObject.SetActive(electric);
         }
-        //player_controller.GetComponent<vThirdPersonInput>().enabled = false;
-        //player_controller.GetComponent<vThirdPersonController>().enabled = false;
         Camera.GetComponent<vThirdPersonCamera>().SetMainTarget(player_ragdoll.transform);
-    }   
+
+        yield return new WaitForSeconds(1.0f);
+
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        death_manager.transform.GetComponent<death_manage>().death_count++;
+    }
 }

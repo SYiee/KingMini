@@ -99,7 +99,7 @@ public class damage_obj : MonoBehaviour
         }
         Camera.GetComponent<vThirdPersonCamera>().SetMainTarget(player_ragdoll.transform);
 
-        yield return new WaitForSeconds(1.0f);
+        yield return new WaitForSeconds(2.0f);
 
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         death_manager.transform.GetComponent<death_manage>().death_count++;

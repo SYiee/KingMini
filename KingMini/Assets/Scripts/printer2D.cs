@@ -36,5 +36,6 @@ public class printer2D : MonoBehaviour
         dust.Stop();
         player.SetActive(true);
         player.transform.position = playerSpawn.position;
+        //Invector.vCharacterController.vThirdPersonController
     }
 }

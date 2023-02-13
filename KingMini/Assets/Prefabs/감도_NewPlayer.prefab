@@ -3619,8 +3619,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 0
   serializedVersion: 2
-  m_Size: {x: 0.5, y: 1.5, z: 0.1}
-  m_Center: {x: 0, y: 1, z: 0}
+  m_Size: {x: 0.5, y: 1.8630829, z: 0.1}
+  m_Center: {x: 0, y: 0.89874744, z: 0}
 --- !u!114 &1648097663735547090
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3641,6 +3641,7 @@ MonoBehaviour:
   electric: 0
   die_on_flat: 1
   death_manager: {fileID: 0}
+  Death_UI: {fileID: 0}
 --- !u!114 &2046023974981735736
 MonoBehaviour:
   m_ObjectHideFlags: 0

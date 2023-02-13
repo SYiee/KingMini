@@ -15,8 +15,10 @@ public class Case : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (canPlay && collision.gameObject.tag == "Player") //여기다가, 3d플레이어일때만 조건 추가
+        if (canPlay && collision.gameObject.tag == "Player")
         {
+            if (collision.gameObject.GetComponent<PlayerState>().state == PlayerState.State.Skinny)
+                return;
             anim.Play("CaseAnim");
             canPlay = false;
         }

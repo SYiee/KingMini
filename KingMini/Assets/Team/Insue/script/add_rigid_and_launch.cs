@@ -6,6 +6,10 @@ public class add_rigid_and_launch : MonoBehaviour
 {
     public GameObject obj;
     public float power = 50;
+
+    [Header("launch children")]
+    public bool child_launch;
+
     private void OnTriggerEnter(Collider other)
     {
         Transform[] objs = obj.GetComponentsInChildren<Transform>();
@@ -15,8 +19,12 @@ public class add_rigid_and_launch : MonoBehaviour
             {
                 child.gameObject.AddComponent<Rigidbody>();
                 child.gameObject.transform.tag = "Obstacle";
-                child.GetComponent<Rigidbody>().AddForce(Vector3.up * power);
+                if (child_launch)
+                {
+                    child.GetComponent<Rigidbody>().AddForce(Vector3.up * power);
+                }
             }
+            GetComponent<Rigidbody>().AddForce(Vector3.up * power);
         }
     }
 }

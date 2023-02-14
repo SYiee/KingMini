@@ -1,18 +1,15 @@
 using System.Collections;
-using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using Invector.vCharacterController;
-using TMPro;
-
 
 public class damage_obj : MonoBehaviour
 {
     public GameObject player_mesh;
     public GameObject player_ragdoll;
     public GameObject player_controller;
-    public GameObject Camera;
+    public GameObject Cam;
 
     [Header("Electric Shock Effect")]
     public GameObject electricObject;
@@ -40,23 +37,22 @@ public class damage_obj : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
-        if (die_on_flat==true)
+        if (die_on_flat == true)
         {
-            
+
             if (transform.position.y < 1 && is_death == false)
             {
-               
-                Die();
-            }
-            
-        }
-            if(Input.GetKeyDown(KeyCode.R))
-            {
+
                 Die();
             }
 
+        }
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            Die();
+        }
     }
 
     private void OnCollisionEnter(Collision other)
@@ -88,16 +84,14 @@ public class damage_obj : MonoBehaviour
 
     IEnumerator die()
     {
-        is_death = true;
         player_ragdoll.SetActive(true);
-        player_ragdoll.transform.SetParent(null);
-        player_controller.transform.SetParent(player_ragdoll.transform);
-        player_mesh.SetActive(false);
+        player_mesh.GetComponent<SkinnedMeshRenderer>().enabled = false;
+        //player_ragdoll.transform.SetParent(null);
+        //Cam.GetComponent<vThirdPersonCamera>().SetMainTarget(player_ragdoll.transform);
         if (electric)
         {
             electricObject.SetActive(electric);
         }
-        Camera.GetComponent<vThirdPersonCamera>().SetMainTarget(player_ragdoll.transform);
 
         yield return new WaitForSeconds(2.0f);
 

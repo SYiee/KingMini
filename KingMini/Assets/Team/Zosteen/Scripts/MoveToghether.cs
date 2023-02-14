@@ -4,19 +4,21 @@ using UnityEngine;
 
 public class MoveToghether : MonoBehaviour
 {
-    public GameObject player;
+    GameObject player = null;
     private void OnCollisionEnter(Collision collision)
     {
         if(collision.gameObject.tag == "Player") 
         {
-            player.transform.SetParent(transform);
+            if(player == null)
+                player = collision.gameObject;
+            player.transform.parent.SetParent(transform);
         }
     }
     private void OnCollisionExit(Collision collision)
     {
         if (collision.gameObject.tag == "Player")
         {
-            player.transform.SetParent(null);
+            player.transform.parent.SetParent(null);
         }
     }
 }

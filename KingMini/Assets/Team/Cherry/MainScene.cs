@@ -16,10 +16,11 @@ public class MainScene : MonoBehaviour
         if (time < 0.7f)
         {
             Title.transform.position = Title.transform.position + new Vector3(0, 0.3f, 0);
+            print(time);
         }
         else
         {
-            Title.transform.position = Title.transform.position + new Vector3(0,  -0.3f, 0);
+            Title.transform.position = Title.transform.position + new Vector3(0, -0.3f, 0);
             if (time > 1.4f)
             {
                 time = 0;

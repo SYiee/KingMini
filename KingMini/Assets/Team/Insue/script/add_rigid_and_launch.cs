@@ -24,7 +24,7 @@ public class add_rigid_and_launch : MonoBehaviour
                     child.GetComponent<Rigidbody>().AddForce(Vector3.up * power);
                 }
             }
-            GetComponent<Rigidbody>().AddForce(Vector3.up * power);
+            obj.GetComponent<Rigidbody>().AddForce(Vector3.up * power);
         }
     }
 }

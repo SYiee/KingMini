@@ -10,6 +10,12 @@ public class MainScene : MonoBehaviour
 
     float time = 0;
 
+    private void Start()
+    {
+        time = 0;
+        Time.timeScale = 1f;
+    }
+
     private void Update()
     {
 

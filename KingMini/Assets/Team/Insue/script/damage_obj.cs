@@ -37,7 +37,7 @@ public class damage_obj : MonoBehaviour
         Death_UI.text = death_manager.transform.GetComponent<death_manage>().death_count.ToString();
 
         // Scene num (Level) ¿˙¿Â
-        PlayerPrefs.SetInt("Level", scene_num);
+        PlayerPrefs.SetInt("Level", SceneManager.GetActiveScene().buildIndex);
     }
 
     // Update is called once per frame

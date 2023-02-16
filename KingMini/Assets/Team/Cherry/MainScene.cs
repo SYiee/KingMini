@@ -43,7 +43,7 @@ public class MainScene : MonoBehaviour
         // 죽은 횟수 & Level 초기화
         GameObject.Find("death_manager").GetComponent<death_manage>().death_count = 0;
         PlayerPrefs.SetInt("Death", 0);
-        PlayerPrefs.SetInt("Scene", 1);
+        PlayerPrefs.SetInt("Level", 1);
 
         SceneManager.LoadScene(1);
 
@@ -52,13 +52,13 @@ public class MainScene : MonoBehaviour
     public void Continue()  // 이어서 플레이
     {
         // 저장된 키 있으면 거기서부터 플레이 or 처음부터
-        if (!PlayerPrefs.HasKey("Scene"))
+        if (!PlayerPrefs.HasKey("Level"))
         {
             SceneManager.LoadScene(1);
         }
         else
         {
-            int level = PlayerPrefs.GetInt("Scene");
+            int level = PlayerPrefs.GetInt("Level");
             SceneManager.LoadScene(level);
         }
 

@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Teleport : MonoBehaviour
 {
-    public string SceneName;
+    public int SceneNum;
 
     void Start()
     {
@@ -20,7 +20,12 @@ public class Teleport : MonoBehaviour
     {     
         if (other.gameObject.tag == "Player")
         {
-            SceneManager.LoadScene(SceneName);
+            int present = SceneManager.GetActiveScene().buildIndex;
+            SceneManager.LoadScene(present + 1);
+
+            //death √ ±‚»≠
+            GameObject.Find("death_manager").GetComponent<death_manage>().death_count = 0;
+            PlayerPrefs.SetInt("Death", 0);
         }
     }
 }

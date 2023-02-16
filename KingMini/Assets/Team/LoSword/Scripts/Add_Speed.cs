@@ -20,7 +20,7 @@ public class Add_Speed : MonoBehaviour
     {
         if (other.gameObject.tag == "Obstacle")
         {
-            other.GetComponent<Ball_Lanuch>().Speed += 0.07f;
+            other.GetComponent<Ball_Lanuch>().Speed += 0.1f;
         }
     }
 }

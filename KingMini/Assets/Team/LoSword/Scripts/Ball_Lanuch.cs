@@ -14,6 +14,6 @@ public class Ball_Lanuch : MonoBehaviour
 
     void Update()
     {
-        gameObject.transform.Translate(new Vector3(0, 0, -1f) *  Speed);
+        gameObject.transform.Translate(new Vector3(0, 0, -1f) * Time.deltaTime * 100 * Speed);
     }
 }

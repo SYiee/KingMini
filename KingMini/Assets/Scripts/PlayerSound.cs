@@ -15,7 +15,8 @@ public class PlayerSound : MonoBehaviour
     }
     public void PlayFootStep()
     {
-        source.PlayOneShot(footstepSounds[Random.Range(0, footstepSounds.Length)]);
+        if(footstepSounds != null)
+            source.PlayOneShot(footstepSounds[Random.Range(0, footstepSounds.Length)]);
     }
 
     public void PlayJumpSound()

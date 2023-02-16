@@ -101,8 +101,9 @@ public class damage_obj : MonoBehaviour
         {
             electricObject.SetActive(electric);
         }
-        //GetComponent<AudioSource>().enabled = false;
+
         GetComponent<PlayerSound>().footstepSounds = null;
+        GetComponent<PlayerSound>().PlayDieSound();
 
         yield return new WaitForSeconds(2.0f);
 

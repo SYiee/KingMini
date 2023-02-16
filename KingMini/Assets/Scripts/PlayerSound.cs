@@ -6,6 +6,7 @@ public class PlayerSound : MonoBehaviour
 {
     public AudioClip[] footstepSounds;
     public AudioClip jumpSound;
+    public AudioClip dieSound;
 
     AudioSource source;
 
@@ -22,5 +23,15 @@ public class PlayerSound : MonoBehaviour
     public void PlayJumpSound()
     {
         source.PlayOneShot(jumpSound);
+    }
+
+    public void PlayDieSound()
+    {
+        if(dieSound != null)
+        {
+            source.PlayOneShot(dieSound);
+            dieSound = null;
+        }
+            
     }
 }

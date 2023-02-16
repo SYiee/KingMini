@@ -6,9 +6,13 @@ using TMPro;
 
 public class death_manage : MonoBehaviour
 {
+    public int death_count = 0;
 
     private void Awake()
     {
+
+        death_count = PlayerPrefs.GetInt("Death");
+
         var obj = FindObjectsOfType<death_manage>();
 
         if (obj.Length == 1)
@@ -20,8 +24,7 @@ public class death_manage : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
-    public float death_count = 0;
+    
 
     void Update()
     {
@@ -29,5 +32,11 @@ public class death_manage : MonoBehaviour
         {
             print(death_count);
         }
+    }
+
+    public void Death()
+    {
+        death_count++;
+        PlayerPrefs.SetInt("Death", death_count);
     }
 }

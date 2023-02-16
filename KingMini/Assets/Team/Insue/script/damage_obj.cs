@@ -99,6 +99,6 @@ public class damage_obj : MonoBehaviour
         yield return new WaitForSeconds(2.0f);
 
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        death_manager.transform.GetComponent<death_manage>().death_count++;
+        death_manager.transform.GetComponent<death_manage>().Death();
     }
 }

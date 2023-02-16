@@ -6,14 +6,35 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Team/Cherry/Test_Main.unity
+    path: Assets/Scene/Lobby.unity
     guid: 4c0155940cb91064b8b45cf85e824c5f
   - enabled: 1
-    path: Assets/Team/Cherry/Test_Cherry.unity
-    guid: a33e94ba65f15be4d853e5a1d6ae427b
+    path: Assets/Scene/Room_Office.unity
+    guid: 9ff0bcaf199359b44b9c671c156d079f
   - enabled: 1
-    path: Assets/Team/Cherry/Test_Cherry2.unity
-    guid: 50d88167c42214f4c918e41e37aee1c8
+    path: Assets/Scene/Room_Storage.unity
+    guid: 3c9cbdc921ab439489e65909a3ba1cf8
+  - enabled: 1
+    path: Assets/Scene/Room_CEO.unity
+    guid: 74d6f6f48a656f04480ec22fac954be4
+  - enabled: 1
+    path: Assets/Scene/Room_PingPong.unity
+    guid: 230fb1b4e93454e41953fe8521ba6b41
+  - enabled: 1
+    path: Assets/Scene/Room_Bath.unity
+    guid: 85f9926e6d7ebe6469ff3ff780e5b06b
+  - enabled: 1
+    path: Assets/Scene/Room_Server.unity
+    guid: 143633df20a6fa5458604906ecd33873
+  - enabled: 1
+    path: Assets/Scene/Room_Multipurpose.unity
+    guid: c2817e34995b35b4a8aaca2ca3746db3
+  - enabled: 1
+    path: Assets/Scene/Room_Hell.unity
+    guid: 2f2673a42c7530a4e9a0090d518701aa
+  - enabled: 1
+    path: Assets/Scene/Room_Kitchen.unity
+    guid: 6331616cf1b898d41974f598d3383c08
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 9e7be553448fa2546aea5752021cbcf7,
       type: 2}

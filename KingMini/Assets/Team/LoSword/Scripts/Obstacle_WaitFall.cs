@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using static ShowIfAttribute;
+
 
 public class Obstacle_WaitFall : MonoBehaviour
 {
@@ -9,7 +9,7 @@ public class Obstacle_WaitFall : MonoBehaviour
 
     public bool canDestroy = true;
 
-    [ShowIf(ActionOnConditionFail.JustDisable, ConditionOperator.And, nameof(canDestroy))]
+
     public float DestroySec = 2f;
     
     Rigidbody Board;

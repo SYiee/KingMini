@@ -21,11 +21,12 @@ public class Teleport : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             int present = SceneManager.GetActiveScene().buildIndex;
-            SceneManager.LoadScene(present + 1);
 
             //death √ ±‚»≠
             GameObject.Find("death_manager").GetComponent<death_manage>().death_count = 0;
             PlayerPrefs.SetInt("Death", 0);
+
+            SceneManager.LoadScene(present + 1);
         }
     }
 }

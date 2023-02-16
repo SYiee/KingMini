@@ -3644,6 +3644,7 @@ MonoBehaviour:
   die_on_flat: 1
   death_manager: {fileID: 0}
   Death_UI: {fileID: 0}
+  scene_num: 0
 --- !u!114 &2046023974981735736
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3678,6 +3679,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: f0f794c67e9233d468a38d165590d253, type: 3}
   - {fileID: 8300000, guid: 1a7741daba5446e46a40f8074aae75dc, type: 3}
   - {fileID: 8300000, guid: 0bc66974c41ff8c4fa15f46d21ad3548, type: 3}
+  jumpSound: {fileID: 8300000, guid: 52441c825cdf2fd42af330a2a7904983, type: 3}
 --- !u!82 &2145554081052625298
 AudioSource:
   m_ObjectHideFlags: 0

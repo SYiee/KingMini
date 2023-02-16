@@ -10,7 +10,7 @@ public class death_manage : MonoBehaviour
 
     private void Awake()
     {
-
+        // 저장된 죽은 횟수를 Load 해옵니다
         death_count = PlayerPrefs.GetInt("Death");
 
         var obj = FindObjectsOfType<death_manage>();
@@ -37,6 +37,7 @@ public class death_manage : MonoBehaviour
     public void Death()
     {
         death_count++;
+        // 죽은 횟수 저장
         PlayerPrefs.SetInt("Death", death_count);
     }
 }

@@ -477,7 +477,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2064314512}
         m_TargetAssemblyTypeName: MainScene, Assembly-CSharp
-        m_MethodName: NewGame
+        m_MethodName: Continue
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

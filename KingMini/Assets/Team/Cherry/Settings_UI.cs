@@ -29,7 +29,7 @@ public class Settings_UI : MonoBehaviour
     public void GotoMainMenu()
     {
         // 메인메뉴로 씬 전환
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(0);
     }
 
     public void ExitGame() // 게임 종료

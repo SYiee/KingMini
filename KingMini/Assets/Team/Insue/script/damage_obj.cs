@@ -92,6 +92,8 @@ public class damage_obj : MonoBehaviour
         player_mesh.GetComponent<SkinnedMeshRenderer>().enabled = false;
         player_controller.GetComponent<vThirdPersonController>().lockRotation = true;
         player_controller.GetComponent<vThirdPersonController>().lockMovement = true;
+        player_controller.GetComponent<vThirdPersonController>().jumpHeight = 0;
+        player_controller.GetComponent<vThirdPersonController>().airSpeed = 0;
         player_controller.GetComponent<CapsuleCollider>().height = 0.5f;
         //player_ragdoll.transform.SetParent(null);
         //Cam.GetComponent<vThirdPersonCamera>().SetMainTarget(player_ragdoll.transform);

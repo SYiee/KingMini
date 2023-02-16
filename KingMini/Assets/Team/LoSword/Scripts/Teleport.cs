@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Teleport : MonoBehaviour
 {
-    public Transform Target;
+    public string SceneName;
 
     void Start()
     {
@@ -16,13 +17,10 @@ public class Teleport : MonoBehaviour
         
     }
     void OnTriggerEnter(Collider other)
-    {
-        Debug.Log(1);
-        other.transform.position = Target.position;
+    {     
         if (other.gameObject.tag == "Player")
         {
-            Debug.Log(2);
-            other.transform.position = Target.position;
+            SceneManager.LoadScene(SceneName);
         }
     }
 }

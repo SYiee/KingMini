@@ -2662,19 +2662,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 3707671971765050363}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &5606184030842522385
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7483468804838192145}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.5799198, y: 0.66820115, z: 1.6391993}
-  m_Center: {x: 0.012170164, y: 2.3303745, z: 0.11694545}
 --- !u!95 &3707671971765049861
 Animator:
   serializedVersion: 4
@@ -2695,25 +2682,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &823199637196752165
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7483468804838192145}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 11626dc1cc4885d4fb8ef942a7a5c863, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  up: 1
-  down: 0
-  left: 0
-  right: 0
-  forward: 0
-  back: 0
-  power: 1000
 --- !u!1001 &3707671971783961898
 PrefabInstance:
   m_ObjectHideFlags: 0

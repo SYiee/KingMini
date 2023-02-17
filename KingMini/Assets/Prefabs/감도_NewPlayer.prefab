@@ -3446,6 +3446,7 @@ GameObject:
   - component: {fileID: 1648097663735547090}
   - component: {fileID: 2046023974981735736}
   - component: {fileID: 7001355553930767240}
+  - component: {fileID: 6439327405014035825}
   - component: {fileID: 2145554081052625298}
   m_Layer: 6
   m_Name: Developer
@@ -3681,6 +3682,23 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 0bc66974c41ff8c4fa15f46d21ad3548, type: 3}
   jumpSound: {fileID: 8300000, guid: 52441c825cdf2fd42af330a2a7904983, type: 3}
   dieSound: {fileID: 8300000, guid: be274e53bf2ea0a42a1df0aff7dc2f9a, type: 3}
+--- !u!114 &6439327405014035825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1648097663735547083}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f6fe2e0cd395664ea4dabae58e99b87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boatSound: {fileID: 8300000, guid: 2d80832d76cef114eb12d81f63a03f28, type: 3}
+  balloonSound: {fileID: 8300000, guid: f2f6019033d75fe4394e727e3aec6379, type: 3}
+  windSound1: {fileID: 8300000, guid: a044877456d18c44cb90e71a3d4dcdfc, type: 3}
+  windSound2: {fileID: 8300000, guid: e8908d3ba1d42bf4188109b849c05b7a, type: 3}
+  printer2D: {fileID: 8300000, guid: dea3ff199935b5f459edb37da98cc861, type: 3}
 --- !u!82 &2145554081052625298
 AudioSource:
   m_ObjectHideFlags: 0

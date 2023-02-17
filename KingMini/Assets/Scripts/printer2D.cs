@@ -9,6 +9,7 @@ public class printer2D : MonoBehaviour
     public Animator animator;
     public ParticleSystem dust;
     public Transform playerSpawn;
+    public AudioClip printer2dSound;
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -24,6 +25,7 @@ public class printer2D : MonoBehaviour
         player.GetComponent<PlayerState>().StateChange(PlayerState.State.Skinny);
         player.SetActive(false);
         dust.Play();
+        GetComponent<AudioSource>().PlayOneShot(printer2dSound);
         player.transform.localScale = new Vector3(1, 1, 0.1f);
         player.GetComponent<BoxCollider>().enabled = true;
         player.GetComponent<CapsuleCollider>().enabled = false;

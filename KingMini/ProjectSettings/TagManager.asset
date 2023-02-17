@@ -9,6 +9,11 @@ TagManager:
   - Broom
   - Obstacle
   - 3dPrinter
+  - Boat
+  - Balloon
+  - Wind1
+  - Wind2
+  - 2dPrinter
   layers:
   - Default
   - TransparentFX

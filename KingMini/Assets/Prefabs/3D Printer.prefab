@@ -193,6 +193,7 @@ MonoBehaviour:
   smoke: {fileID: 1154607445020500392}
   ring: {fileID: 1258627251605919349}
   playerSpawn: {fileID: 1420265962492717754}
+  printer3dSound: {fileID: 8300000, guid: aa5f02ecba852cd488b635d27a36de43, type: 3}
 --- !u!1 &1420265962492717755
 GameObject:
   m_ObjectHideFlags: 0

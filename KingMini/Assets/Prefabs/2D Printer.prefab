@@ -345,6 +345,7 @@ MonoBehaviour:
   animator: {fileID: 7673203649201916640}
   dust: {fileID: 7547591620290583670}
   playerSpawn: {fileID: 7673203650584022383}
+  printer2dSound: {fileID: 8300000, guid: dea3ff199935b5f459edb37da98cc861, type: 3}
 --- !u!1 &7673203650584022382
 GameObject:
   m_ObjectHideFlags: 0

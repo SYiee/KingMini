@@ -5,12 +5,18 @@ using UnityEngine;
 public class Wind : MonoBehaviour
 {
     //public StarterAssets.ThirdPersonController control;
-    public Rigidbody rb;
+    private Rigidbody rb;
     public float JumpForce = 30f;
+    public bool IsAudio;
+
+    private AudioSource theAudio;
 
     void Start()
     {
-        
+        if (IsAudio)
+        {
+            theAudio = GetComponent<AudioSource>();
+        }
     }
 
     void Update()
@@ -25,6 +31,10 @@ public class Wind : MonoBehaviour
 
         if (other.tag == "Player")
         {
+            if (IsAudio)
+            {
+                theAudio.Play();
+            }
             Rigidbody rigid = other.GetComponent<Rigidbody>();
             //Debug.Log(23);
             rigid.AddForce(new Vector3(0, JumpForce, 0), ForceMode.Impulse);

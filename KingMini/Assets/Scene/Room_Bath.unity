@@ -3962,17 +3962,17 @@ PrefabInstance:
     - target: {fileID: 1648097662568047188, guid: 78e68651e09151f40b2d80d32ef78bd1,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -98.91
+      value: -108.03
       objectReference: {fileID: 0}
     - target: {fileID: 1648097662568047188, guid: 78e68651e09151f40b2d80d32ef78bd1,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 27.42
+      value: 18.84
       objectReference: {fileID: 0}
     - target: {fileID: 1648097662568047188, guid: 78e68651e09151f40b2d80d32ef78bd1,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 135.32
+      value: 85.08
       objectReference: {fileID: 0}
     - target: {fileID: 1648097662568047188, guid: 78e68651e09151f40b2d80d32ef78bd1,
         type: 3}
@@ -10973,8 +10973,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5809dc179257194098b6920c139a1d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb: {fileID: 0}
   JumpForce: 800
+  IsAudio: 0
 --- !u!65 &1868035551
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11162,8 +11162,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5809dc179257194098b6920c139a1d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb: {fileID: 0}
   JumpForce: 800
+  IsAudio: 0
 --- !u!65 &1905458495
 BoxCollider:
   m_ObjectHideFlags: 0

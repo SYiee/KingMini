@@ -2728,17 +2728,17 @@ PrefabInstance:
     - target: {fileID: 1648097662568047188, guid: 78e68651e09151f40b2d80d32ef78bd1,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -70.97
+      value: 1.13
       objectReference: {fileID: 0}
     - target: {fileID: 1648097662568047188, guid: 78e68651e09151f40b2d80d32ef78bd1,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -62.98
+      value: -56.44
       objectReference: {fileID: 0}
     - target: {fileID: 1648097662568047188, guid: 78e68651e09151f40b2d80d32ef78bd1,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 54.78
+      value: 34.85
       objectReference: {fileID: 0}
     - target: {fileID: 1648097662568047188, guid: 78e68651e09151f40b2d80d32ef78bd1,
         type: 3}
@@ -11165,8 +11165,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5809dc179257194098b6920c139a1d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb: {fileID: 0}
   JumpForce: 1000
+  IsAudio: 0
 --- !u!1001 &1556420563
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13335,7 +13335,7 @@ PrefabInstance:
     - target: {fileID: 7673203650567041517, guid: ed1fc1ff735dd4c45a2758b10d6faf0b,
         type: 3}
       propertyPath: m_TagString
-      value: 2dPrinter
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 7673203650567041520, guid: ed1fc1ff735dd4c45a2758b10d6faf0b,
         type: 3}

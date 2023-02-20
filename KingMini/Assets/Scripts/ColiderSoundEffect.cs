@@ -35,8 +35,16 @@ public class ColiderSoundEffect : MonoBehaviour
         }
 
     }
+    private void OnCollisionExit(Collision collision)
+    {
+        if (collision.transform.tag == "Boat")
+        {
+            source.Stop();
+        }
+    }
     private void OnTriggerEnter(Collider other)
     {
 
     }
+
 }

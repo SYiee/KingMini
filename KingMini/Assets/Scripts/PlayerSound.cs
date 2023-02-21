@@ -7,6 +7,7 @@ public class PlayerSound : MonoBehaviour
     public AudioClip[] footstepSounds;
     public AudioClip jumpSound;
     public AudioClip dieSound;
+    public AudioClip electricSound;
 
     AudioSource source;
 
@@ -33,5 +34,10 @@ public class PlayerSound : MonoBehaviour
             dieSound = null;
         }
             
+    }
+
+    public void PlayElectricSound()
+    {
+        source.PlayOneShot(electricSound);
     }
 }

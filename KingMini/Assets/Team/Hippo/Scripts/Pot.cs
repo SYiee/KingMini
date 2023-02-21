@@ -6,6 +6,8 @@ public class Pot: MonoBehaviour
 {
     public GameObject setActiveObject;
     Animation anim;
+    public AudioClip potSound1;
+    public AudioClip potSound2;
 
     private void Awake()
     {
@@ -23,5 +25,15 @@ public class Pot: MonoBehaviour
     {
         setActiveObject.SetActive(true);
         gameObject.SetActive(false);
+    }
+
+    public void PlayPotSound1()
+    {
+        AudioManager.instance.GetComponent<AudioSource>().PlayOneShot(potSound1);
+    }
+
+    public void PlayPotSound2()
+    {
+        AudioManager.instance.GetComponent<AudioSource>().PlayOneShot(potSound2);
     }
 }

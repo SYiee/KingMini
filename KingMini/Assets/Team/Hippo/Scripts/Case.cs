@@ -6,6 +6,7 @@ public class Case : MonoBehaviour
 {
     Animation anim;
     bool canPlay = true;
+    
 
     private void Awake()
     {
@@ -23,4 +24,6 @@ public class Case : MonoBehaviour
             canPlay = false;
         }
     }
+
+    
 }

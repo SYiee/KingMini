@@ -105,6 +105,7 @@ public class damage_obj : MonoBehaviour
         if (electric)
         {
             electricObject.SetActive(electric);
+            GetComponent<PlayerSound>().PlayElectricSound();
         }
 
         GetComponent<PlayerSound>().footstepSounds = null;

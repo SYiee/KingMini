@@ -40,7 +40,7 @@ public class PlayerPush : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         Debug.Log("jump!");
-        //if (!canJump) return;
+
         if (collision.gameObject.tag == "Player")   
         {
             if (player == null)
@@ -63,36 +63,10 @@ public class PlayerPush : MonoBehaviour
 
     void JumpOut()
     {
-        //canJump = true;
         foreach (MeshCollider mesh in meshs)
             mesh.isTrigger = false;
     }
 
-    //private void OnTriggerEnter(Collider other)
-    //{
-    //    if (other.tag == "Player")
-    //    {
-    //        Rigidbody rigid = other.gameObject.GetComponent<Rigidbody>();
-    //        rigid.AddForce(vec, ForceMode.Impulse);
-    //    }
-    //}
-    //private void OnCollisionStay(Collision collision)
-    //{
-    //    if (collision.gameObject.tag == "Player")
-    //    {
-    //        Rigidbody rigid = collision.gameObject.GetComponentInChildren<Rigidbody>();
-    //        rigid.AddForce(vec, ForceMode.Impulse);
-    //    }
-    //}
-
-    //private void OnTriggerEnter(Collider other)
-    //{
-    //    //if (other.tag == "Player")
-    //    //{
-    //        Rigidbody rigid = other.gameObject.GetComponentInChildren<Rigidbody>();
-    //        rigid.AddForce(vec, ForceMode.Impulse);
-    //    //}
-    //}
 
 
 }

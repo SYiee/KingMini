@@ -38,6 +38,7 @@ public class PatrolAI : MonoBehaviour
                 if (count >= wayPoints.Length)
                     count = 0;
             }
+
         }
         
     }

@@ -5167,6 +5167,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SceneNum: 0
+  FadeOutUI: {fileID: 0}
 --- !u!4 &851598156 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4835422768889594, guid: 29f65bfd5aeec584eb4acb518ade8cc4,
@@ -11163,7 +11164,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JumpForce: 800
-  IsAudio: 0
+  IsAudio: 1
 --- !u!65 &1905458495
 BoxCollider:
   m_ObjectHideFlags: 0

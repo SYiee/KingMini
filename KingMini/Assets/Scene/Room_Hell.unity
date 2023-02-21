@@ -502,7 +502,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JumpForce: 500
-  IsAudio: 0
+  IsAudio: 1
 --- !u!4 &107857354 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4399088155060190, guid: ff9f795bd077dc347a3529c57a391d7c,
@@ -2611,6 +2611,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SceneNum: 0
+  FadeOutUI: {fileID: 0}
 --- !u!1 &701523912
 GameObject:
   m_ObjectHideFlags: 0

@@ -1247,6 +1247,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 318030044}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &352941846 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1648097663735547083, guid: 78e68651e09151f40b2d80d32ef78bd1,
+    type: 3}
+  m_PrefabInstance: {fileID: 633689839}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &371493440
 GameObject:
   m_ObjectHideFlags: 0
@@ -2453,7 +2459,7 @@ PrefabInstance:
     - target: {fileID: 1648097662568047188, guid: 78e68651e09151f40b2d80d32ef78bd1,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -69.92
+      value: -69.89
       objectReference: {fileID: 0}
     - target: {fileID: 1648097662568047188, guid: 78e68651e09151f40b2d80d32ef78bd1,
         type: 3}
@@ -2499,6 +2505,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1648097663735547083, guid: 78e68651e09151f40b2d80d32ef78bd1,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1648097663735547087, guid: 78e68651e09151f40b2d80d32ef78bd1,
         type: 3}
@@ -2611,7 +2622,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SceneNum: 0
-  FadeOutUI: {fileID: 0}
+  FadeOutUI: {fileID: 85620490142069564, guid: fdea75abee4bc9043b6a27160e537135, type: 3}
+  Player: {fileID: 352941846}
 --- !u!1 &701523912
 GameObject:
   m_ObjectHideFlags: 0

@@ -7776,6 +7776,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 78e68651e09151f40b2d80d32ef78bd1, type: 3}
+--- !u!1 &222370431 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1648097663735547083, guid: 78e68651e09151f40b2d80d32ef78bd1,
+    type: 3}
+  m_PrefabInstance: {fileID: 222370430}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &223081870
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30861,6 +30867,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Portal
       objectReference: {fileID: 0}
+    - target: {fileID: 4182955650125804126, guid: 233c8cd48b94b5843b666f16e2ec5936,
+        type: 3}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 222370431}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 233c8cd48b94b5843b666f16e2ec5936, type: 3}
 --- !u!1001 &812955337

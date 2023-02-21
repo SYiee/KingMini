@@ -7,6 +7,7 @@ public class Teleport : MonoBehaviour
 {
     public int SceneNum;
     public GameObject FadeOutUI;
+    public GameObject Player;
 
     void Start()
     {
@@ -31,6 +32,9 @@ public class Teleport : MonoBehaviour
             Instantiate(FadeOutUI, new Vector3(1000, 700, 0), Quaternion.identity, GameObject.Find("Canvas").transform);
             GameObject.Find("BasicUI").SetActive(false);
             Invoke("LoadNextScene", 3f);
+
+            // Dev 끄기
+            Player.SetActive(false);
 
 
             // 최고 Level 갱신

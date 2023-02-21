@@ -4026,6 +4026,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 78e68651e09151f40b2d80d32ef78bd1, type: 3}
+--- !u!1 &633689840 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1648097663735547083, guid: 78e68651e09151f40b2d80d32ef78bd1,
+    type: 3}
+  m_PrefabInstance: {fileID: 633689839}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &647443068
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5167,7 +5173,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SceneNum: 0
-  FadeOutUI: {fileID: 0}
+  FadeOutUI: {fileID: 85620490142069564, guid: fdea75abee4bc9043b6a27160e537135, type: 3}
+  Player: {fileID: 633689840}
 --- !u!4 &851598156 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4835422768889594, guid: 29f65bfd5aeec584eb4acb518ade8cc4,

@@ -46203,6 +46203,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Portal
       objectReference: {fileID: 0}
+    - target: {fileID: 4182955650125804126, guid: 233c8cd48b94b5843b666f16e2ec5936,
+        type: 3}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 1066391452}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 233c8cd48b94b5843b666f16e2ec5936, type: 3}
 --- !u!4 &1289027432 stripped

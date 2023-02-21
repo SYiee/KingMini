@@ -15,10 +15,15 @@ public class launch_loop : MonoBehaviour
     public float interval = 10;
 
     public float destroy_time = 1f;
-    // Start is called before the first frame update
+
+    AudioSource source;
+    [Header("Sound")]
+    public bool is_sound = false;
+    public AudioClip Sound;
+
     void Start()
     {
-
+        source = GetComponent<AudioSource>();
     }
 
     private float time = 0;
@@ -34,6 +39,10 @@ public class launch_loop : MonoBehaviour
             ball.transform.position = start.transform.position;
             Vector3 dir = new Vector3(end.transform.position.x, end.transform.position.y + 2, end.transform.position.z) - start.transform.position;
             ball.GetComponent<Rigidbody>().AddForce(dir * power);
+            if(is_sound)
+            {
+                source.PlayOneShot(Sound);
+            }
             Destroy(ball, destroy_time);
         }
     }

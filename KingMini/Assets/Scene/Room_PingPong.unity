@@ -12652,7 +12652,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &363592961
 Transform:
   m_ObjectHideFlags: 0
@@ -12662,7 +12662,7 @@ Transform:
   m_GameObject: {fileID: 363592960}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 11, y: 11, z: 11}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 18175688}
@@ -31759,12 +31759,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1013125323}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &902065515 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1648097662568047187, guid: 78e68651e09151f40b2d80d32ef78bd1,
-    type: 3}
-  m_PrefabInstance: {fileID: 1456233391}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &903332269 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4631730319309726, guid: 5a2b2aefafe7a2f4bb79271e2b6b2e62,
@@ -42433,7 +42427,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obj: {fileID: 2103102887}
-  A: {fileID: 902065515}
+  A: {fileID: 1066391452}
   power: 30
 --- !u!114 &1171372329
 MonoBehaviour:

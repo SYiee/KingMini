@@ -258,7 +258,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adcf0782f697732478eaeeb09fb1e9af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SceneName: 
+  SceneNum: 0
+  FadeOutUI: {fileID: 85620490142069564, guid: fdea75abee4bc9043b6a27160e537135, type: 3}
 --- !u!4 &4187773479507150176 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4835422768889594, guid: 29f65bfd5aeec584eb4acb518ade8cc4,

@@ -22,19 +22,24 @@ public class damage_obj : MonoBehaviour
     [Header("Death Manager")]
     public GameObject death_manager;
     public TextMeshProUGUI Death_UI;  // 몇 번 죽었는지 표시
-    public int scene_num;
+    public int scene_num; // 현재 씬 넘버
 
 
     private bool is_death = false;
 
+    private void Start()
+    {
+        scene_num = SceneManager.GetActiveScene().buildIndex;
+    }
+
     private void Awake()
     {
-        
-        death_manager = FindObjectOfType<death_manage>().gameObject;
+        //death_manager = FindObjectOfType<death_manage>().gameObject;
+        death_manager = GameObject.Find("death_manager");
 
-        // death UI 할당 & 업데이트
+        // death UI 할당 & 업데이트x
         Death_UI = GameObject.Find("Death_Num").GetComponent<TextMeshProUGUI>();
-        Death_UI.text = death_manager.transform.GetComponent<death_manage>().death_count.ToString();
+        Death_UI.text = death_manager.GetComponent<death_manage>().death_count.ToString();
 
         // Scene num (Level) 저장
         PlayerPrefs.SetInt("Level", SceneManager.GetActiveScene().buildIndex);
@@ -108,6 +113,6 @@ public class damage_obj : MonoBehaviour
         yield return new WaitForSeconds(2.0f);
 
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        death_manager.transform.GetComponent<death_manage>().Death();
+        death_manager.GetComponent<death_manage>().Death(); // 현재방의 death count를 업데이트
     }
 }

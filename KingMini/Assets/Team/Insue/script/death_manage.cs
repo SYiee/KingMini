@@ -2,11 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 public class death_manage : MonoBehaviour
 {
     public int death_count = 0;
+    public int scene;
 
     private void Awake()
     {
@@ -37,7 +39,12 @@ public class death_manage : MonoBehaviour
     public void Death()
     {
         death_count++;
+        print(death_count);
+
+
         // Á×Àº È½¼ö ÀúÀå
-        PlayerPrefs.SetInt("Death", death_count);
+        scene = SceneManager.GetActiveScene().buildIndex;
+        PlayerPrefs.SetInt("Death" + scene, death_count);
     }
+
 }

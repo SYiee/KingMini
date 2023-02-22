@@ -14,4 +14,10 @@ public class StaplerSound : MonoBehaviour
     {
         source.Play();
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.tag == "Player")
+            GetComponent<Animator>().enabled = false;
+    }
 }

@@ -4010,7 +4010,7 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 2055548223685727205}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &170483820
+--- !u!114 &170483816
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4022,7 +4022,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26e9263ab749657409033eec64fbdbf5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  caseSound: {fileID: 8300000, guid: bb0ca4282eb69ff4498a5a790f1d74b8, type: 3}
+  sound: {fileID: 8300000, guid: bb0ca4282eb69ff4498a5a790f1d74b8, type: 3}
+  sound2: {fileID: 0}
 --- !u!1001 &175877051
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5102,6 +5103,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!65 &221544613
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 221544600}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.97844, y: 1.0432023, z: 0.66672283}
+  m_Center: {x: 0.04526152, y: 0.52160114, z: -0.52176714}
 --- !u!1001 &223438275
 PrefabInstance:
   m_ObjectHideFlags: 0

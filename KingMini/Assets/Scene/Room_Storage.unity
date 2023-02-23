@@ -17812,6 +17812,26 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1339406762}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1347410675 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6922463042940974306, guid: ac00823ba754d9f41aa65837a568dbdd,
+    type: 3}
+  m_PrefabInstance: {fileID: 6923389599337776023}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &1347410679
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1347410675}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300002, guid: 2b6e2b0493d2e9648b1b90ccb600b072, type: 3}
 --- !u!1001 &1349729958
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28112,6 +28132,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4554568412107357709, guid: ac00823ba754d9f41aa65837a568dbdd,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.5087
+      objectReference: {fileID: 0}
     - target: {fileID: 6923389598620246386, guid: ac00823ba754d9f41aa65837a568dbdd,
         type: 3}
       propertyPath: potSound
@@ -28207,6 +28232,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6924081541518199633, guid: ac00823ba754d9f41aa65837a568dbdd,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6924871161665854698, guid: ac00823ba754d9f41aa65837a568dbdd,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -28232,6 +28262,21 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 63.8
       objectReference: {fileID: 0}
+    - target: {fileID: 6985630395981371384, guid: ac00823ba754d9f41aa65837a568dbdd,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 4300000, guid: 2b6e2b0493d2e9648b1b90ccb600b072, type: 3}
+    - target: {fileID: 6987229395908210199, guid: ac00823ba754d9f41aa65837a568dbdd,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 4300000, guid: afdcbf1d9edad2345910c4541559d8c5, type: 3}
+    - target: {fileID: 6987229395908210199, guid: ac00823ba754d9f41aa65837a568dbdd,
+        type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8560193073503737804, guid: ac00823ba754d9f41aa65837a568dbdd,
         type: 3}
       propertyPath: Death_UI
@@ -28251,6 +28296,16 @@ PrefabInstance:
         type: 3}
       propertyPath: death_manager
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8560193073503737810, guid: ac00823ba754d9f41aa65837a568dbdd,
+        type: 3}
+      propertyPath: m_Height
+      value: 1.7619075
+      objectReference: {fileID: 0}
+    - target: {fileID: 8560193073503737810, guid: ac00823ba754d9f41aa65837a568dbdd,
+        type: 3}
+      propertyPath: m_Center.y
+      value: 0.87404627
       objectReference: {fileID: 0}
     - target: {fileID: 8560193074468090189, guid: ac00823ba754d9f41aa65837a568dbdd,
         type: 3}

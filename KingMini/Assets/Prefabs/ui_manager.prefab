@@ -185,7 +185,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6614010737554015080}
-  - component: {fileID: 188002141391251793}
   m_Layer: 5
   m_Name: sound setting
   m_TagString: Untagged
@@ -216,21 +215,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -322}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &188002141391251793
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1284876208005676035}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 277e72cda273c4e4dada7cb2290927de, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audioMixer: {fileID: 24100000, guid: f08ac92f4b27e9940b030cf99ed7a9c0, type: 2}
-  BgmSlider: {fileID: 5835737759183065792}
-  SfxSlider: {fileID: 761074487431937382}
 --- !u!1 &1592056025501657173
 GameObject:
   m_ObjectHideFlags: 0
@@ -760,11 +744,10 @@ MonoBehaviour:
       - m_Target: {fileID: 2265243945981019352}
         m_TargetAssemblyTypeName: Settings_UI, Assembly-CSharp
         m_MethodName: GotoMainMenu
-        m_Mode: 2
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 8300000, guid: ca9a90a4b3f73ee4bbf406f3e7cfa7c4,
-            type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1635,7 +1618,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 188002141391251793}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: SoundOptions, Assembly-CSharp
         m_MethodName: SetSFXVolme
         m_Mode: 1
@@ -2132,7 +2115,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 188002141391251793}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: SoundOptions, Assembly-CSharp
         m_MethodName: SetBgmVolme
         m_Mode: 1

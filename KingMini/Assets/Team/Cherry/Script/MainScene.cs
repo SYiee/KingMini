@@ -91,11 +91,6 @@ public class MainScene : MonoBehaviour
         PlayerPrefs.SetInt("Level", 2);
         PlayerPrefs.SetInt("BestLevel", 2);
 
-
-        //bgm reset
-        Destroy(AudioManager.instance);
-        AudioManager.instance.transform.GetChild(0).GetComponent<AudioSource>().mute = true;
-
         SceneManager.LoadScene(1);
         PlayerPrefs.SetInt("FirstPlay", 0);
 
@@ -155,9 +150,6 @@ public class MainScene : MonoBehaviour
                 GameObject.Find("death_manager").GetComponent<death_manage>().death_count = PlayerPrefs.GetInt("Death" + scene);
                 print(GameObject.Find("death_manager").GetComponent<death_manage>().death_count);
             }
-
-            //bgm reset
-            Destroy(AudioManager.instance);
 
             SceneManager.LoadScene(scene);
         }

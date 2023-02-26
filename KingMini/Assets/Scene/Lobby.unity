@@ -757,6 +757,7 @@ RectTransform:
   - {fileID: 855784600}
   - {fileID: 1744494129}
   - {fileID: 1790037217}
+  - {fileID: 1275500822}
   m_Father: {fileID: 2064314511}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1827,6 +1828,139 @@ MonoBehaviour:
   m_ShadowLayerMask: 1
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
+--- !u!1 &1275500821
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1275500822}
+  - component: {fileID: 1275500825}
+  - component: {fileID: 1275500824}
+  - component: {fileID: 1275500823}
+  m_Layer: 5
+  m_Name: Back
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1275500822
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1275500821}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 310012998}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -881, y: 467}
+  m_SizeDelta: {x: 80, y: 80}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1275500823
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1275500821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1275500824}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2064314512}
+        m_TargetAssemblyTypeName: MainScene, Assembly-CSharp
+        m_MethodName: BacktoMain
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1275500824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1275500821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 2f5621ced47967649819ed28fc802c35, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1275500825
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1275500821}
+  m_CullTransparentMesh: 1
 --- !u!1 &1413430436
 GameObject:
   m_ObjectHideFlags: 0
@@ -2122,12 +2256,13 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Start
+  m_text: 'Beta Test
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d0bc369571f7bae4fad184b1a47149a7, type: 2}
+  m_sharedMaterial: {fileID: -2659990690887851307, guid: d0bc369571f7bae4fad184b1a47149a7,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2372,7 +2507,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -397}
-  m_SizeDelta: {x: 182.9, y: 73.8}
+  m_SizeDelta: {x: 236.1, y: 73.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1790037218
 MonoBehaviour:
@@ -2443,7 +2578,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.5969764, g: 0.7830189, b: 0.5946511, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2704,46 +2839,62 @@ MonoBehaviour:
     scene_name: 
     num: 1
     best_score: 0
-    sprite: {fileID: 21300000, guid: 9284cd9360087a845a2633bf83d752fb, type: 3}
+    sprite: {fileID: 21300000, guid: 5c8d09fa74555184d96768b9d067f4c3, type: 3}
+    can_try: 0
   - name: Storage
     scene_name: 
     num: 2
     best_score: 0
-    sprite: {fileID: 21300000, guid: f65c0489760de6041bfc12ff2c8deeb8, type: 3}
+    sprite: {fileID: 21300000, guid: 97379aab72b79884bb16d008522357f5, type: 3}
+    can_try: 0
   - name: CEO
     scene_name: 
     num: 3
     best_score: 0
-    sprite: {fileID: 21300000, guid: 4aa4dc909b586c14198e6883472062be, type: 3}
+    sprite: {fileID: 21300000, guid: d085d954fec8f39469a70238f3e48361, type: 3}
+    can_try: 0
   - name: PingPong
     scene_name: 
     num: 4
     best_score: 0
-    sprite: {fileID: 21300000, guid: 4aa4dc909b586c14198e6883472062be, type: 3}
+    sprite: {fileID: 21300000, guid: 1019e246bd0d9c64a9d9c6f199da44cf, type: 3}
+    can_try: 0
   - name: Bath
     scene_name: 
     num: 5
     best_score: 0
-    sprite: {fileID: 21300000, guid: 4aa4dc909b586c14198e6883472062be, type: 3}
+    sprite: {fileID: 21300000, guid: 185ab3a339d22774ab801f46368904ac, type: 3}
+    can_try: 0
   - name: Server
     scene_name: 
     num: 6
     best_score: 0
-    sprite: {fileID: 21300000, guid: 4aa4dc909b586c14198e6883472062be, type: 3}
+    sprite: {fileID: 21300000, guid: 1cbc836a230ad864f8df7f4a1d91dd0a, type: 3}
+    can_try: 0
   - name: Multipurpose
     scene_name: 
     num: 7
     best_score: 0
-    sprite: {fileID: 21300000, guid: 4aa4dc909b586c14198e6883472062be, type: 3}
+    sprite: {fileID: 21300000, guid: 3f4cf70ec6dfe5349968442bf04d817a, type: 3}
+    can_try: 0
   - name: Hell
     scene_name: 
     num: 8
     best_score: 0
-    sprite: {fileID: 21300000, guid: 4aa4dc909b586c14198e6883472062be, type: 3}
+    sprite: {fileID: 21300000, guid: d4056b95d53d6a842b4bcd7313ab5641, type: 3}
+    can_try: 0
+  - name: Kitchen & Living Room
+    scene_name: 
+    num: 9
+    best_score: 0
+    sprite: {fileID: 21300000, guid: dd53aeb0eadf4a644a916ebbf131ac96, type: 3}
+    can_try: 0
   txtRoomName: {fileID: 1025621909}
   txtRoomNum: {fileID: 211549531}
   imgRoom: {fileID: 1437285870}
+  imgSecretRoom: {fileID: 21300000, guid: 91ce2b54bc21896419675dbdb69f2885, type: 3}
   errornum: 2
+  deathManager: {fileID: 0}
   Title: {fileID: 19478186}
   Continue_Btn: {fileID: 83813110}
   MainUI: {fileID: 1463286448}

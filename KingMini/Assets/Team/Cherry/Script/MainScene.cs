@@ -24,6 +24,7 @@ public class MainScene : MonoBehaviour
     public TextMeshProUGUI txtRoomName;
     public TextMeshProUGUI txtRoomNum;
     public Image imgRoom;
+    public Sprite imgSecretRoom;
     public int errornum; // ¾µ¸ð¾ø´Â ¾À
     public GameObject deathManager;
 
@@ -151,6 +152,12 @@ public class MainScene : MonoBehaviour
 
     }
 
+    public void BacktoMain()
+    {
+        MainUI.SetActive(true);
+        ContinueUI.SetActive(false);
+    }
+
     void SettingRoom()
     {
         int scene = currentRoom + errornum;
@@ -166,7 +173,7 @@ public class MainScene : MonoBehaviour
         {
             txtRoomName.text = "???";
             txtRoomNum.text = roomList[currentRoom].num;
-            imgRoom.sprite = roomList[currentRoom].sprite;
+            imgRoom.sprite = imgSecretRoom;
         }
     }
 

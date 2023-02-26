@@ -157,9 +157,10 @@ GameObject:
   - component: {fileID: 3189996757180822955}
   - component: {fileID: 3189996757180822956}
   - component: {fileID: 3189996757180822957}
+  - component: {fileID: 8463172872780477473}
   m_Layer: 0
   m_Name: Trigger
-  m_TagString: Untagged
+  m_TagString: FlashCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -205,6 +206,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Flash_obj: {fileID: 85620490142069564, guid: 4418319d8084ab444b58e9d06935433a, type: 3}
+--- !u!114 &8463172872780477473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3189996757180822954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c25d48edbc832d044af7dad2740cfe7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Sound: {fileID: 8300000, guid: 5c9aacf68b6f4d049936c29e27f7714a, type: 3}
 --- !u!1 &3189996757860677565
 GameObject:
   m_ObjectHideFlags: 0

@@ -14,7 +14,7 @@ public class PocketBall_Hole : MonoBehaviour
             Debug.Log("»ç¸Á");
             Destroy(other.gameObject);
         }
-        if (other.tag == "PocketBall")
+        if (other.tag == "Obstacle")
         {
             Destroy(other.gameObject);
             PocketBall.GetComponent<PocketBall>().RedBalls.Remove(other.gameObject);

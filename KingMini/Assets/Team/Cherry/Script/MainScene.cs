@@ -48,6 +48,7 @@ public class MainScene : MonoBehaviour
         Time.timeScale = 1f;
 
         currentRoom = PlayerPrefs.GetInt("Level") - errornum; // 현재 방을 메인으로
+        print(PlayerPrefs.GetInt("Level"));
 
         // 처음 플레이 할 때에는 Continue 버튼 비활성화
         if (!PlayerPrefs.HasKey("FirstPlay") || PlayerPrefs.GetInt("FirstPlay") == 1)
@@ -161,7 +162,7 @@ public class MainScene : MonoBehaviour
         ContinueUI.SetActive(false);
     }
 
-    void SettingRoom()
+    void SettingRoom()  // UI들을 초기화 해줍니다
     {
         int scene = currentRoom + errornum;
         print(scene);
@@ -170,10 +171,10 @@ public class MainScene : MonoBehaviour
         {
             txtRoomName.text = roomList[currentRoom].name;
             txtRoomNum.text = roomList[currentRoom].num;
-            txtBestDeath.text = roomList[currentRoom].best_death.ToString();
             txtBestTime.text = roomList[currentRoom].best_time.ToString();
             imgRoom.sprite = roomList[currentRoom].sprite;
 
+            // BestDeath 로드
             if (!PlayerPrefs.HasKey("BestDeath" + scene))
             {
                 txtBestDeath.text = "999999";

@@ -3699,6 +3699,7 @@ MonoBehaviour:
   balloonSound: {fileID: 8300000, guid: f2f6019033d75fe4394e727e3aec6379, type: 3}
   windSound1: {fileID: 8300000, guid: a044877456d18c44cb90e71a3d4dcdfc, type: 3}
   windSound2: {fileID: 8300000, guid: e8908d3ba1d42bf4188109b849c05b7a, type: 3}
+  cameraSound: {fileID: 8300000, guid: 5c9aacf68b6f4d049936c29e27f7714a, type: 3}
 --- !u!82 &2145554081052625298
 AudioSource:
   m_ObjectHideFlags: 0

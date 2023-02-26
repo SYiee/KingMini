@@ -8,6 +8,9 @@ public class PocketBall : MonoBehaviour
     public List<GameObject> RedBalls = new List<GameObject>();
     public GameObject RedBall2;
 
+    public AudioSource source;
+    public AudioClip Sound;
+
     Transform Target1;
     Transform Target2;
     Rigidbody white;
@@ -31,8 +34,8 @@ public class PocketBall : MonoBehaviour
 
             Vector3 l_vector = RedBalls[rand].transform.position - WhiteBall.transform.position;
             WhiteBall.transform.rotation = Quaternion.LookRotation(l_vector).normalized;
-
-           // WhiteBall.transform.LookAt(RedBall.transform);
+            source.PlayOneShot(Sound);
+            // WhiteBall.transform.LookAt(RedBall.transform);
             white.AddForce(l_vector.normalized * 2000f, ForceMode.Force);
             yield return new WaitForSeconds(1f);
         }

@@ -9,6 +9,7 @@ public class ColiderSoundEffect : MonoBehaviour
     public AudioClip balloonSound;
     public AudioClip windSound1;
     public AudioClip windSound2;
+    public AudioClip cameraSound;
 
     void Start()
     {
@@ -32,6 +33,10 @@ public class ColiderSoundEffect : MonoBehaviour
         if (collision.transform.tag == "Wind2")
         {
             source.PlayOneShot(windSound2);
+        }
+        if (collision.transform.tag == "FlashCamera")
+        {
+            source.PlayOneShot(cameraSound);
         }
 
     }

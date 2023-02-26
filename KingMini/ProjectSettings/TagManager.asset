@@ -12,6 +12,10 @@ TagManager:
   - Balloon
   - Wind1
   - Wind2
+  - BlackBall
+  - WhiteBall
+  - 3dPrinter
+  - FlashCamera
   layers:
   - Default
   - TransparentFX

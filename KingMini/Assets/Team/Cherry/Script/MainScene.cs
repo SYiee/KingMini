@@ -11,7 +11,8 @@ public class Room
     public string name;
     public string scene_name;
     public string num;
-    public int best_score;
+    public int best_death;
+    public float best_time;
     public Sprite sprite;
     public bool can_try;
 }
@@ -23,6 +24,8 @@ public class MainScene : MonoBehaviour
     public Room[] roomList;
     public TextMeshProUGUI txtRoomName;
     public TextMeshProUGUI txtRoomNum;
+    public TextMeshProUGUI txtBestDeath;
+    public TextMeshProUGUI txtBestTime;
     public Image imgRoom;
     public Sprite imgSecretRoom;
     public int errornum; // 쓸모없는 씬
@@ -45,6 +48,7 @@ public class MainScene : MonoBehaviour
         Time.timeScale = 1f;
 
         currentRoom = PlayerPrefs.GetInt("Level") - errornum; // 현재 방을 메인으로
+        print(PlayerPrefs.GetInt("Level"));
 
         // 처음 플레이 할 때에는 Continue 버튼 비활성화
         if (!PlayerPrefs.HasKey("FirstPlay") || PlayerPrefs.GetInt("FirstPlay") == 1)
@@ -166,7 +170,7 @@ public class MainScene : MonoBehaviour
         ContinueUI.SetActive(false);
     }
 
-    void SettingRoom()
+    void SettingRoom()  // UI들을 초기화 해줍니다
     {
         int scene = currentRoom + errornum;
         print(scene);
@@ -175,12 +179,24 @@ public class MainScene : MonoBehaviour
         {
             txtRoomName.text = roomList[currentRoom].name;
             txtRoomNum.text = roomList[currentRoom].num;
+            txtBestTime.text = roomList[currentRoom].best_time.ToString();
             imgRoom.sprite = roomList[currentRoom].sprite;
+
+            // BestDeath 로드
+            if (!PlayerPrefs.HasKey("BestDeath" + scene))
+            {
+                txtBestDeath.text = "999999";
+                PlayerPrefs.SetInt("BestDeath" + scene, 999999);
+            }
+            else
+                txtBestDeath.text = PlayerPrefs.GetInt("BestDeath" + scene).ToString();
         }
         else
         {
             txtRoomName.text = "???";
             txtRoomNum.text = roomList[currentRoom].num;
+            txtBestDeath.text = "???";
+            txtBestTime.text = "???";
             imgRoom.sprite = imgSecretRoom;
         }
     }

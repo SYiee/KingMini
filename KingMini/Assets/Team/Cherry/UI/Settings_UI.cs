@@ -26,10 +26,11 @@ public class Settings_UI : MonoBehaviour
         Cursor.visible = false;
     }
 
-    public void GotoMainMenu()
+    public void GotoMainMenu(AudioClip clip)
     {
         // 메인메뉴로 씬 전환
         SceneManager.LoadScene(0);
+        AudioManager.instance.transform.GetChild(0).GetComponent<AudioSource>().clip= clip;
     }
 
     public void ExitGame() // 게임 종료

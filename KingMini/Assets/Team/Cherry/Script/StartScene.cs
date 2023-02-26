@@ -12,7 +12,8 @@ public class StartScene : MonoBehaviour
     void Start()
     {
         Invoke("ActiveButton", 10f);
-        Instantiate(FadeInUI, new Vector3(1000, 700, 0), Quaternion.identity, GameObject.Find("StartScene").transform);
+        GameObject fade = Instantiate(FadeInUI, new Vector3(1000, 700, 0), Quaternion.identity, GameObject.Find("StartScene").transform);
+        Destroy(fade, 10f);
     }
 
     void ActiveButton()

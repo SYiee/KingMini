@@ -38,6 +38,10 @@ public class MainScene : MonoBehaviour
     public GameObject MainUI;
     public GameObject ContinueUI;
 
+
+    [Header("Sound Manager")]
+    public GameObject soundmanager;
+
     int currentRoom = 0;
     float time = 0;
 
@@ -93,8 +97,8 @@ public class MainScene : MonoBehaviour
 
 
         //bgm reset
-        Destroy(AudioManager.instance);
-        AudioManager.instance.transform.GetChild(0).GetComponent<AudioSource>().mute = true;
+        Destroy(soundmanager);
+        //AudioManager.instance.transform.GetChild(0).GetComponent<AudioSource>().mute = true;
 
         SceneManager.LoadScene(1);
         PlayerPrefs.SetInt("FirstPlay", 0);

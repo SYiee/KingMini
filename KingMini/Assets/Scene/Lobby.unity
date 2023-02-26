@@ -4047,6 +4047,7 @@ MonoBehaviour:
   Continue_Btn: {fileID: 83813110}
   MainUI: {fileID: 1463286448}
   ContinueUI: {fileID: 310012997}
+  soundmanager: {fileID: 227254788}
 --- !u!1 &2118129637
 GameObject:
   m_ObjectHideFlags: 0

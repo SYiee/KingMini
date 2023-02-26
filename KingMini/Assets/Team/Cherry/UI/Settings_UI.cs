@@ -31,6 +31,7 @@ public class Settings_UI : MonoBehaviour
         // 메인메뉴로 씬 전환
         SceneManager.LoadScene(0);
         AudioManager.instance.transform.GetChild(0).GetComponent<AudioSource>().clip= clip;
+        AudioManager.instance.transform.GetChild(0).GetComponent<AudioSource>().Play();
     }
 
     public void ExitGame() // 게임 종료

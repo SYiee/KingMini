@@ -7194,7 +7194,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5809dc179257194098b6920c139a1d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  JumpForce: 1000
+  JumpForce: 30
   IsAudio: 0
 --- !u!65 &203355345
 BoxCollider:
@@ -7204,7 +7204,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 203355342}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.747499, y: 1.1260968, z: 0.88842785}
@@ -8808,7 +8808,7 @@ PrefabInstance:
     - target: {fileID: 64000991318047992, guid: ba0062436167ab542828dd808a230863,
         type: 3}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ba0062436167ab542828dd808a230863, type: 3}
@@ -8836,7 +8836,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5809dc179257194098b6920c139a1d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  JumpForce: 1000
+  JumpForce: 30
   IsAudio: 0
 --- !u!1001 &251427436
 PrefabInstance:
@@ -17630,7 +17630,7 @@ PrefabInstance:
     - target: {fileID: 64747362697575250, guid: 4049acbc020051c449977e4a1cc6419f,
         type: 3}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4049acbc020051c449977e4a1cc6419f, type: 3}
@@ -17658,7 +17658,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5809dc179257194098b6920c139a1d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  JumpForce: 1000
+  JumpForce: 30
   IsAudio: 0
 --- !u!114 &481249813
 MonoBehaviour:
@@ -20399,7 +20399,7 @@ PrefabInstance:
     - target: {fileID: 64341487013537582, guid: 51b795ff209f3a4459e4df0c459e3f85,
         type: 3}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 51b795ff209f3a4459e4df0c459e3f85, type: 3}
@@ -20427,7 +20427,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5809dc179257194098b6920c139a1d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  JumpForce: 1000
+  JumpForce: 30
   IsAudio: 0
 --- !u!114 &558353988
 MonoBehaviour:
@@ -28271,7 +28271,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5809dc179257194098b6920c139a1d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  JumpForce: 1200
+  JumpForce: 36
   IsAudio: 0
 --- !u!65 &736504971
 BoxCollider:
@@ -28281,7 +28281,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 736504968}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.747499, y: 1.1492591, z: 0.88842785}
@@ -31912,7 +31912,7 @@ PrefabInstance:
     - target: {fileID: 64341487013537582, guid: 51b795ff209f3a4459e4df0c459e3f85,
         type: 3}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 668644768035045638, guid: 51b795ff209f3a4459e4df0c459e3f85,
         type: 3}
@@ -31945,7 +31945,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5809dc179257194098b6920c139a1d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  JumpForce: 1000
+  JumpForce: 30
   IsAudio: 0
 --- !u!114 &827465132
 MonoBehaviour:
@@ -33222,7 +33222,7 @@ PrefabInstance:
     - target: {fileID: 64747362697575250, guid: 4049acbc020051c449977e4a1cc6419f,
         type: 3}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4049acbc020051c449977e4a1cc6419f, type: 3}
@@ -33250,7 +33250,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5809dc179257194098b6920c139a1d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  JumpForce: 1000
+  JumpForce: 30
   IsAudio: 0
 --- !u!114 &865860319
 MonoBehaviour:
@@ -42698,7 +42698,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5809dc179257194098b6920c139a1d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  JumpForce: 1200
+  JumpForce: 36
   IsAudio: 0
 --- !u!65 &1128442959
 BoxCollider:
@@ -42708,7 +42708,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1128442956}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1.9424925, y: 0.4129328, z: 0.924851}
@@ -54857,7 +54857,7 @@ PrefabInstance:
     - target: {fileID: 64000991318047992, guid: ba0062436167ab542828dd808a230863,
         type: 3}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ba0062436167ab542828dd808a230863, type: 3}
@@ -54885,7 +54885,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5809dc179257194098b6920c139a1d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  JumpForce: 1000
+  JumpForce: 30
   IsAudio: 0
 --- !u!114 &1399206652
 MonoBehaviour:
@@ -77883,7 +77883,7 @@ PrefabInstance:
     - target: {fileID: 64683023928814958, guid: 4f9e8a4062d7cfc478a2d7e611b68f90,
         type: 3}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4f9e8a4062d7cfc478a2d7e611b68f90, type: 3}
@@ -77911,7 +77911,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5809dc179257194098b6920c139a1d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  JumpForce: 1000
+  JumpForce: 30
   IsAudio: 0
 --- !u!114 &2066033924
 MonoBehaviour:

@@ -24,20 +24,20 @@ public class Wind : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision other)
     {
         //control.GetComponent<StarterAssets.ThirdPersonController>()._verticalVelocity += 10f;
         //Debug.Log(23);
 
-        if (other.tag == "Player")
+        if (other.gameObject.tag == "Player")
         {
             if (IsAudio)
             {
                 theAudio.Play();
             }
-            Rigidbody rigid = other.GetComponent<Rigidbody>();
-            //Debug.Log(23);
-            rigid.AddForce(new Vector3(0, JumpForce, 0), ForceMode.Impulse);
+            rb = other.gameObject.GetComponentInChildren<Rigidbody>();
+            rb.velocity = new Vector3(rb.velocity.x, 0, rb.velocity.z);
+            rb.AddForce(new Vector3(0, JumpForce, 0), ForceMode.VelocityChange);
             //control.GetComponent<StarterAssets.ThirdPersonController>()._verticalVelocity += JumpForce;
         }
     }

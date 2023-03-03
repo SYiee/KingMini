@@ -64511,11 +64511,6 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
-    - target: {fileID: 7155145610841552474, guid: 1666141c0eec1b645beb567bce3adb61,
-        type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 7158471968255609331, guid: 1666141c0eec1b645beb567bce3adb61,
         type: 3}
       propertyPath: m_Layer
@@ -65143,6 +65138,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7286621771243766710, guid: 1666141c0eec1b645beb567bce3adb61,
         type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.43
+      objectReference: {fileID: 0}
+    - target: {fileID: 7286621771243766710, guid: 1666141c0eec1b645beb567bce3adb61,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 33.74
+      objectReference: {fileID: 0}
+    - target: {fileID: 7286621771243766710, guid: 1666141c0eec1b645beb567bce3adb61,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 46.54
+      objectReference: {fileID: 0}
+    - target: {fileID: 7286621771243766710, guid: 1666141c0eec1b645beb567bce3adb61,
+        type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.01569243
       objectReference: {fileID: 0}
@@ -65166,6 +65176,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 178.202
       objectReference: {fileID: 0}
+    - target: {fileID: 7286621772072494383, guid: 1666141c0eec1b645beb567bce3adb61,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 112
+      objectReference: {fileID: 0}
     - target: {fileID: 7286621772072494384, guid: 1666141c0eec1b645beb567bce3adb61,
         type: 3}
       propertyPath: Death_UI
@@ -65185,6 +65200,46 @@ PrefabInstance:
         type: 3}
       propertyPath: death_manager
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7286621772448064424, guid: 1666141c0eec1b645beb567bce3adb61,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.0002328847
+      objectReference: {fileID: 0}
+    - target: {fileID: 7286621772448064424, guid: 1666141c0eec1b645beb567bce3adb61,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.00034713745
+      objectReference: {fileID: 0}
+    - target: {fileID: 7286621772448064424, guid: 1666141c0eec1b645beb567bce3adb61,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.0076606693
+      objectReference: {fileID: 0}
+    - target: {fileID: 7286621772448064424, guid: 1666141c0eec1b645beb567bce3adb61,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.99998975
+      objectReference: {fileID: 0}
+    - target: {fileID: 7286621772448064424, guid: 1666141c0eec1b645beb567bce3adb61,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.004525919
+      objectReference: {fileID: 0}
+    - target: {fileID: 7286621772448064424, guid: 1666141c0eec1b645beb567bce3adb61,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.00014209784
+      objectReference: {fileID: 0}
+    - target: {fileID: 7286621772448064424, guid: 1666141c0eec1b645beb567bce3adb61,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -0.519
+      objectReference: {fileID: 0}
+    - target: {fileID: 7286621772448064424, guid: 1666141c0eec1b645beb567bce3adb61,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0.016
       objectReference: {fileID: 0}
     - target: {fileID: 7384091315926928442, guid: 1666141c0eec1b645beb567bce3adb61,
         type: 3}
@@ -65264,6 +65319,11 @@ PrefabInstance:
     - target: {fileID: 8295614233975500213, guid: 1666141c0eec1b645beb567bce3adb61,
         type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8999694009146600209, guid: 1666141c0eec1b645beb567bce3adb61,
+        type: 3}
+      propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []

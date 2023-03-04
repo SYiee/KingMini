@@ -7158,6 +7158,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2265243945444024531, guid: d67015f2134dc9749a898217023b0188,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d67015f2134dc9749a898217023b0188, type: 3}
 --- !u!114 &258179372 stripped
@@ -13794,6 +13799,38 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 503599852}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &504321008 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3708702432039967195, guid: 1666141c0eec1b645beb567bce3adb61,
+    type: 3}
+  m_PrefabInstance: {fileID: 3707671971973170949}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &504321013
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 504321008}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.35391793, y: 0.44624996, z: 0.058202952}
+  m_Center: {x: 0.85939425, y: 0.6356126, z: 0.02901176}
+--- !u!65 &504321014
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 504321008}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.3217982, y: 0.89377093, z: 0.07973454}
+  m_Center: {x: -0.07327008, y: 0.5082185, z: 0.03977755}
 --- !u!4 &506396569 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4596254208174904, guid: 90311115f672de840b32200630521e9e,
@@ -64485,6 +64522,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsTrigger
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3717679889505743207, guid: 1666141c0eec1b645beb567bce3adb61,
+        type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3717679889505743207, guid: 1666141c0eec1b645beb567bce3adb61,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4436026558310276193, guid: 1666141c0eec1b645beb567bce3adb61,
         type: 3}

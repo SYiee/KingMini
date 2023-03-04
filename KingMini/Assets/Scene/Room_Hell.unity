@@ -1355,6 +1355,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ui_manager
       objectReference: {fileID: 0}
+    - target: {fileID: 2265243944867778775, guid: d67015f2134dc9749a898217023b0188,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2265243944867778777, guid: d67015f2134dc9749a898217023b0188,
         type: 3}
       propertyPath: m_RootOrder
@@ -2515,7 +2520,7 @@ PrefabInstance:
     - target: {fileID: 1648097662568047188, guid: 78e68651e09151f40b2d80d32ef78bd1,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -72.88
+      value: -69.92
       objectReference: {fileID: 0}
     - target: {fileID: 1648097662568047188, guid: 78e68651e09151f40b2d80d32ef78bd1,
         type: 3}

@@ -41,6 +41,9 @@ public class Teleport : MonoBehaviour
             GameObject.Find("BasicUI").SetActive(false);
             Invoke("LoadNextScene", 3f);
 
+            // Room 이름 수정
+            //GameObject.Find("ui_manager").GetComponent<Esc_UI>().ChangeName(scene_num-2);
+
 
             // 최고 Level 갱신
             if (PlayerPrefs.HasKey("BestLevel"))  //  키값이 있으면 

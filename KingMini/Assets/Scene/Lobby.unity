@@ -3972,7 +3972,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   roomList:
-  - name: Office
+  - name: Office Room
     scene_name: 
     num: 1
     best_death: 0
@@ -3986,42 +3986,42 @@ MonoBehaviour:
     best_time: 0
     sprite: {fileID: 21300000, guid: 97379aab72b79884bb16d008522357f5, type: 3}
     can_try: 0
-  - name: CEO
+  - name: CEO Room
     scene_name: 
     num: 3
     best_death: 0
     best_time: 0
     sprite: {fileID: 21300000, guid: d085d954fec8f39469a70238f3e48361, type: 3}
     can_try: 0
-  - name: PingPong
+  - name: PingPong Room
     scene_name: 
     num: 4
     best_death: 0
     best_time: 0
     sprite: {fileID: 21300000, guid: 1019e246bd0d9c64a9d9c6f199da44cf, type: 3}
     can_try: 0
-  - name: Bath
+  - name: BathRoom
     scene_name: 
     num: 5
     best_death: 0
     best_time: 0
     sprite: {fileID: 21300000, guid: 185ab3a339d22774ab801f46368904ac, type: 3}
     can_try: 0
-  - name: Server
+  - name: Server Room
     scene_name: 
     num: 6
     best_death: 0
     best_time: 0
     sprite: {fileID: 21300000, guid: 1cbc836a230ad864f8df7f4a1d91dd0a, type: 3}
     can_try: 0
-  - name: Multipurpose
+  - name: Multipurpose Room
     scene_name: 
     num: 7
     best_death: 0
     best_time: 0
     sprite: {fileID: 21300000, guid: 3f4cf70ec6dfe5349968442bf04d817a, type: 3}
     can_try: 0
-  - name: Hell
+  - name: Hell Room
     scene_name: 
     num: 8
     best_death: 0

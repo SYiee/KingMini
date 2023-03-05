@@ -64,22 +64,22 @@ public class MainScene : MonoBehaviour
 
     private void Update()
     {
+        // 제목 트월킹
+        //if (time < 0.7f)
+        //{
+        //    Title.transform.position = Title.transform.position + new Vector3(0, 0.3f, 0);
+        //   // print(time);
+        //}
+        //else
+        //{
+        //    Title.transform.position = Title.transform.position + new Vector3(0, -0.3f, 0);
+        //    if (time > 1.4f)
+        //    {
+        //        time = 0;
+        //    }
+        //}
 
-        if (time < 0.7f)
-        {
-            Title.transform.position = Title.transform.position + new Vector3(0, 0.3f, 0);
-           // print(time);
-        }
-        else
-        {
-            Title.transform.position = Title.transform.position + new Vector3(0, -0.3f, 0);
-            if (time > 1.4f)
-            {
-                time = 0;
-            }
-        }
-
-        time += Time.deltaTime;
+        //time += Time.deltaTime;
     }
 
     public void NewGame()  // 새로운 게임 시작

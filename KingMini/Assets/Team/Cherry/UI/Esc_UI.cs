@@ -6,15 +6,17 @@ using TMPro;
 
 public class Esc_UI : MonoBehaviour
 {
-    public GameObject Settings;     
-    public TextMeshProUGUI Name_txt;
+    public GameObject Settings;
+    public TextMeshProUGUI[] text_time;
+    public TextMeshProUGUI text_name;
     bool is_pause = false;
+    float time = 0;
 
     public List<string> name = new List<string>();
 
     private void Start()
     {
-        Name_txt.text = name[SceneManager.GetActiveScene().buildIndex -2];
+        text_name.text = name[SceneManager.GetActiveScene().buildIndex -2];
     }
 
     // Update is called once per frame
@@ -42,10 +44,20 @@ public class Esc_UI : MonoBehaviour
             Settings.SetActive(is_pause);
 
         }
+
+        // ≈∏¿Ã∏”
+        time += Time.deltaTime;
+        text_time[0].text = ((int)time / 3600 / 10).ToString();
+        text_time[1].text = (((int)time / 3600) % 10 ).ToString();
+        text_time[2].text = (((int)time / 60 % 60) / 10).ToString();
+        text_time[3].text = (((int)time / 60 % 60) % 10).ToString();
+        text_time[4].text = (((int)time % 60) / 10).ToString();
+        text_time[5].text = (((int)time % 60) % 10).ToString();
+
     }
 
     public void ChangeName(int num)
     {
-        Name_txt.text = name[num];
+        text_name.text = name[num];
     }
 }

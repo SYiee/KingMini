@@ -8,6 +8,7 @@ using TMPro;
 public class death_manage : MonoBehaviour
 {
     public int death_count = 0;
+    public int time_count = 0;
     public int scene;
 
     private void Awake()

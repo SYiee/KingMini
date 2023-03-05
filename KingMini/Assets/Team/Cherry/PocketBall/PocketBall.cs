@@ -8,7 +8,7 @@ public class PocketBall : MonoBehaviour
     public List<GameObject> RedBalls = new List<GameObject>();
     public GameObject RedBall2;
 
-    public AudioSource source;
+    AudioSource source;
     public AudioClip Sound;
 
     Transform Target1;
@@ -19,6 +19,7 @@ public class PocketBall : MonoBehaviour
     void Start()
     {
         white = WhiteBall.GetComponent<Rigidbody>();
+        source = FindObjectOfType<AudioSource>();
         StartCoroutine("moveBall");
     }
 

@@ -3681,7 +3681,10 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 1a7741daba5446e46a40f8074aae75dc, type: 3}
   - {fileID: 8300000, guid: 0bc66974c41ff8c4fa15f46d21ad3548, type: 3}
   jumpSound: {fileID: 8300000, guid: 52441c825cdf2fd42af330a2a7904983, type: 3}
-  dieSound: {fileID: 8300000, guid: b5c1bf94040d0a04abd066c59a4a558d, type: 3}
+  dieSounds:
+  - {fileID: 8300000, guid: b5c1bf94040d0a04abd066c59a4a558d, type: 3}
+  - {fileID: 8300000, guid: 969cd2680a07e4a42b1b9e40807116aa, type: 3}
+  - {fileID: 8300000, guid: 4a93618b0a454844c888930b36220a6a, type: 3}
   electricSound: {fileID: 8300000, guid: 37c8d423ad0889e45b78f7442585f696, type: 3}
 --- !u!114 &6439327405014035825
 MonoBehaviour:

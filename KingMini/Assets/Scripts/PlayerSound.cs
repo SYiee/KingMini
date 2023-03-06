@@ -5,14 +5,18 @@ using UnityEngine;
 public class PlayerSound : MonoBehaviour
 {
     public AudioClip[] footstepSounds;
+    public AudioClip[] dieSounds;
+
     public AudioClip jumpSound;
-    public AudioClip dieSound;
     public AudioClip electricSound;
+
+    bool isDie;
 
     AudioSource source;
 
     private void Awake()
     {
+        isDie = false;
         source = GetComponent<AudioSource>();
     }
     public void PlayFootStep()
@@ -28,10 +32,10 @@ public class PlayerSound : MonoBehaviour
 
     public void PlayDieSound()
     {
-        if(dieSound != null)
+        if(!isDie && dieSounds != null)
         {
-            source.PlayOneShot(dieSound);
-            dieSound = null;
+            source.PlayOneShot(footstepSounds[Random.Range(0, dieSounds.Length)]);
+            isDie = true;
         }
             
     }

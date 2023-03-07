@@ -148,8 +148,9 @@ public class MainScene : MonoBehaviour
     {
         int scene = currentRoom + errornum;
 
-        if(scene <= PlayerPrefs.GetInt("BestLevel"))
-        {
+    // 이부분 if문 다시 넣어주기! 빌드용으로 없앰
+       // if(scene <= PlayerPrefs.GetInt("BestLevel"))
+      //  {
             if (!PlayerPrefs.HasKey("Death" + scene))
             {
                 GameObject.Find("death_manager").GetComponent<death_manage>().death_count = 0;
@@ -159,12 +160,12 @@ public class MainScene : MonoBehaviour
                 GameObject.Find("death_manager").GetComponent<death_manage>().death_count = PlayerPrefs.GetInt("Death" + scene);
                 print(GameObject.Find("death_manager").GetComponent<death_manage>().death_count);
             }
-
+            
             //bgm reset
             Destroy(AudioManager.instance);
 
             SceneManager.LoadScene(scene);
-        }
+       // }
 
     }
 

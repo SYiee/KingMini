@@ -192,6 +192,8 @@ public class MainScene : MonoBehaviour
                 txtBestDeath.text = "???";
                 PlayerPrefs.SetInt("BestDeath" + scene, 999999);
             }
+            else if(PlayerPrefs.GetInt("BestDeath" + scene) == 999999)
+                txtBestDeath.text = "???";
             else
                 txtBestDeath.text = PlayerPrefs.GetInt("BestDeath" + scene).ToString();
         }

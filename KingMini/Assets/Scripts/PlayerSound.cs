@@ -34,7 +34,7 @@ public class PlayerSound : MonoBehaviour
     {
         if(!isDie && dieSounds != null)
         {
-            source.PlayOneShot(footstepSounds[Random.Range(0, dieSounds.Length)]);
+            source.PlayOneShot(dieSounds[Random.Range(0, dieSounds.Length)]);
             isDie = true;
         }
             

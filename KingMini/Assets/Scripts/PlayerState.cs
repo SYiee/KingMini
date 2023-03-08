@@ -13,4 +13,8 @@ public class PlayerState : MonoBehaviour
         state = presentState;
     }
 
+    private void Update()
+    {
+        print(state);
+    }
 }

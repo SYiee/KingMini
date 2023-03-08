@@ -40,7 +40,7 @@ public class MainScene : MonoBehaviour
 
 
     [Header("Sound Manager")]
-    public GameObject soundmanager;
+    private GameObject soundmanager;
 
     int currentRoom = 0;
     float time = 0;
@@ -53,6 +53,7 @@ public class MainScene : MonoBehaviour
 
         currentRoom = PlayerPrefs.GetInt("Level") - errornum; // 현재 방을 메인으로
         print(PlayerPrefs.GetInt("Level"));
+        soundmanager = AudioManager.instance.gameObject;
 
         // 처음 플레이 할 때에는 Continue 버튼 비활성화
         if (!PlayerPrefs.HasKey("FirstPlay") || PlayerPrefs.GetInt("FirstPlay") == 1)
@@ -108,6 +109,9 @@ public class MainScene : MonoBehaviour
 
     public void Continue()  // 이어서 플레이
     {
+        //bgm reset
+        Destroy(soundmanager);
+
         MainUI.SetActive(false);
         ContinueUI.SetActive(true);
         SettingRoom();
@@ -122,6 +126,9 @@ public class MainScene : MonoBehaviour
         //    SceneManager.LoadScene(level);
 
         //}
+
+
+
     }
 
     // Update is called once per frame
@@ -162,7 +169,7 @@ public class MainScene : MonoBehaviour
             }
             
             //bgm reset
-            Destroy(AudioManager.instance);
+            Destroy(soundmanager);
 
             SceneManager.LoadScene(scene);
        // }

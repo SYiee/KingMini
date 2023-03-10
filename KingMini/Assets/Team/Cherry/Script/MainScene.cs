@@ -199,6 +199,7 @@ public class MainScene : MonoBehaviour
         print(PlayerPrefs.GetInt("BestLevel"));
         if (scene <= PlayerPrefs.GetInt("BestLevel"))
         {
+            print(PlayerPrefs.GetFloat("BestTime" + scene));
             txtRoomName.text = roomList[currentRoom].name;
             txtRoomNum.text = roomList[currentRoom].num;
             imgRoom.sprite = roomList[currentRoom].sprite;

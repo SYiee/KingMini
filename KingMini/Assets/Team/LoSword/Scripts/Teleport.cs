@@ -44,6 +44,8 @@ public class Teleport : MonoBehaviour
             Invoke("LoadNextScene", 3f);
 
             // Time & BestTime 초기화
+            present_time = GameObject.Find("ui_manager").GetComponent<Esc_UI>().time;
+            PlayerPrefs.SetFloat("Time" + scene_num, present_time);
             if (present_time <= best_time)  // 최고기록 갱신
                 PlayerPrefs.SetFloat("BestTime" + scene_num, present_time);
             PlayerPrefs.SetFloat("Time" + scene_num, 0);

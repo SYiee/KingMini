@@ -150,7 +150,7 @@ RectTransform:
   m_GameObject: {fileID: 19478186}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.855084, y: 0.82805, z: 1}
+  m_LocalScale: {x: 0.5966495, y: 0.48674434, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1463286449}
@@ -181,7 +181,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 94a1bf75542911c4aabebce61b13c50a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e8efcc16d4bf0684bad4a5eba62bd1fc, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1295,9 +1295,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-        m_MethodName: Play
+      - m_Target: {fileID: 2064314512}
+        m_TargetAssemblyTypeName: MainScene, Assembly-CSharp
+        m_MethodName: QuitGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4040,14 +4040,13 @@ MonoBehaviour:
   txtBestDeath: {fileID: 1476547344}
   txtBestTime: {fileID: 2118129639}
   imgRoom: {fileID: 1437285870}
-  imgSecretRoom: {fileID: 21300000, guid: 82f0b192a926f3b4ba93aac90d7ccde3, type: 3}
+  imgSecretRoom: {fileID: 21300000, guid: 91ce2b54bc21896419675dbdb69f2885, type: 3}
   errornum: 2
   deathManager: {fileID: 0}
   Title: {fileID: 19478186}
   Continue_Btn: {fileID: 83813110}
   MainUI: {fileID: 1463286448}
   ContinueUI: {fileID: 310012997}
-  soundmanager: {fileID: 227254788}
 --- !u!1 &2118129637
 GameObject:
   m_ObjectHideFlags: 0

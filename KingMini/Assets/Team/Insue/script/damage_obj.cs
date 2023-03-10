@@ -113,7 +113,11 @@ public class damage_obj : MonoBehaviour
 
         yield return new WaitForSeconds(2.0f);
 
+        float present_time = GameObject.Find("ui_manager").GetComponent<Esc_UI>().time;
+        PlayerPrefs.SetFloat("Time" + scene_num, present_time);
+
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         death_manager.GetComponent<death_manage>().Death(); // 현재방의 death count를 업데이트
+
     }
 }

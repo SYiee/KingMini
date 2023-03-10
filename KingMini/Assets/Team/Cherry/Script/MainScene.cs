@@ -25,7 +25,7 @@ public class MainScene : MonoBehaviour
     public TextMeshProUGUI txtRoomName;
     public TextMeshProUGUI txtRoomNum;
     public TextMeshProUGUI txtBestDeath;
-    public TextMeshProUGUI txtBestTime;
+    public TextMeshProUGUI[] text_time;
     public Image imgRoom;
     public Sprite imgSecretRoom;
     public int errornum; // 쓸모없는 씬
@@ -92,10 +92,13 @@ public class MainScene : MonoBehaviour
         {
             int a = i + errornum; 
             PlayerPrefs.SetInt("Death" + a, 0);
+            PlayerPrefs.SetInt("Time" + a, 0);
+            PlayerPrefs.SetInt("BestDeath" + a, 999999);
+            PlayerPrefs.SetFloat("BestTime" + a, 999999);
         }
         PlayerPrefs.SetInt("Level", 2);
         PlayerPrefs.SetInt("BestLevel", 2);
-
+        
 
         //bgm reset
         Destroy(soundmanager);
@@ -158,6 +161,7 @@ public class MainScene : MonoBehaviour
     // 이부분 if문 다시 넣어주기! 빌드용으로 없앰
        // if(scene <= PlayerPrefs.GetInt("BestLevel"))
       //  {
+            // death reset or get data
             if (!PlayerPrefs.HasKey("Death" + scene))
             {
                 GameObject.Find("death_manager").GetComponent<death_manage>().death_count = 0;
@@ -167,7 +171,13 @@ public class MainScene : MonoBehaviour
                 GameObject.Find("death_manager").GetComponent<death_manage>().death_count = PlayerPrefs.GetInt("Death" + scene);
                 print(GameObject.Find("death_manager").GetComponent<death_manage>().death_count);
             }
-            
+
+            // 저장된 time data 없는 경우 reset
+            if (!PlayerPrefs.HasKey("Time" + scene))
+            {
+                PlayerPrefs.SetFloat("Time" + scene, 0);
+            }
+
             //bgm reset
             Destroy(soundmanager);
 
@@ -191,26 +201,48 @@ public class MainScene : MonoBehaviour
         {
             txtRoomName.text = roomList[currentRoom].name;
             txtRoomNum.text = roomList[currentRoom].num;
-            txtBestTime.text = roomList[currentRoom].best_time.ToString();
             imgRoom.sprite = roomList[currentRoom].sprite;
 
-            // BestDeath 로드
-            if (!PlayerPrefs.HasKey("BestDeath" + scene))
-            {
-                txtBestDeath.text = "???";
-                PlayerPrefs.SetInt("BestDeath" + scene, 999999);
-            }
-            else if(PlayerPrefs.GetInt("BestDeath" + scene) == 999999)
-                txtBestDeath.text = "???";
+            // Best Death set
+            if(PlayerPrefs.GetInt("BestDeath" + scene) == 999999)
+                txtBestDeath.text = "? ? ?";
             else
                 txtBestDeath.text = PlayerPrefs.GetInt("BestDeath" + scene).ToString();
+
+            // Best Time set
+            if (PlayerPrefs.GetFloat("BestTime" + scene) == 999999)
+            {
+                text_time[0].text = "?";
+                text_time[1].text = "?";
+                text_time[2].text = "?";
+                text_time[3].text = "?";
+                text_time[4].text = "?";
+                text_time[5].text = "?";
+            }
+            else
+            {
+                float time = PlayerPrefs.GetFloat("BestTime" + scene);
+                print(time);
+                text_time[0].text = ((int)time / 3600 / 10).ToString();
+                text_time[1].text = (((int)time / 3600) % 10).ToString();
+                text_time[2].text = (((int)time / 60 % 60) / 10).ToString();
+                text_time[3].text = (((int)time / 60 % 60) % 10).ToString();
+                text_time[4].text = (((int)time % 60) / 10).ToString();
+                text_time[5].text = (((int)time % 60) % 10).ToString();
+            }
+
         }
         else
         {
             txtRoomName.text = "???";
             txtRoomNum.text = roomList[currentRoom].num;
-            txtBestDeath.text = "???";
-            txtBestTime.text = "???";
+            txtBestDeath.text = "? ? ?";
+            text_time[0].text = "?";
+            text_time[1].text = "?";
+            text_time[2].text = "?";
+            text_time[3].text = "?";
+            text_time[4].text = "?";
+            text_time[5].text = "?";
             imgRoom.sprite = imgSecretRoom;
         }
     }

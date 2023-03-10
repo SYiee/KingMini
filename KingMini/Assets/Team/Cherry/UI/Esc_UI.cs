@@ -10,13 +10,16 @@ public class Esc_UI : MonoBehaviour
     public TextMeshProUGUI[] text_time;
     public TextMeshProUGUI text_name;
     bool is_pause = false;
-    float time = 0;
+    public float time = 0;
+    int scenenum;
 
     public List<string> name = new List<string>();
 
     private void Start()
     {
-        text_name.text = name[SceneManager.GetActiveScene().buildIndex -2];
+        scenenum = SceneManager.GetActiveScene().buildIndex;
+        text_name.text = name[SceneManager.GetActiveScene().buildIndex - 2];
+        time = PlayerPrefs.GetFloat("Time" + scenenum);
     }
 
     // Update is called once per frame
@@ -27,10 +30,11 @@ public class Esc_UI : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             is_pause = !is_pause;
+            PlayerPrefs.SetFloat("Time" + scenenum, time);
 
             // 게임 일시정지 & 마우스 커서 보이도록
             if (is_pause)
-            {
+            {   
                 Time.timeScale = 0;
                 Cursor.visible = true;
             }
@@ -53,7 +57,6 @@ public class Esc_UI : MonoBehaviour
         text_time[3].text = (((int)time / 60 % 60) % 10).ToString();
         text_time[4].text = (((int)time % 60) / 10).ToString();
         text_time[5].text = (((int)time % 60) % 10).ToString();
-
     }
 
     public void ChangeName(int num)

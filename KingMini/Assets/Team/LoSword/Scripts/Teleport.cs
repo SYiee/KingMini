@@ -25,6 +25,8 @@ public class Teleport : MonoBehaviour
             int scene_num = SceneManager.GetActiveScene().buildIndex;
             int best_death = PlayerPrefs.GetInt("BestDeath" + scene_num);
             int present_death = PlayerPrefs.GetInt("Death" + scene_num);
+            float best_time = PlayerPrefs.GetFloat("BestTime" + scene_num);
+            float present_time = PlayerPrefs.GetFloat("Time" + scene_num);
 
             // best_death 초기화
             if(present_death < best_death)
@@ -41,21 +43,16 @@ public class Teleport : MonoBehaviour
             GameObject.Find("BasicUI").SetActive(false);
             Invoke("LoadNextScene", 3f);
 
-            // Room 이름 수정
-            //GameObject.Find("ui_manager").GetComponent<Esc_UI>().ChangeName(scene_num-2);
+            // Time & BestTime 초기화
+            if (present_time <= best_time)  // 최고기록 갱신
+                PlayerPrefs.SetFloat("BestTime" + scene_num, present_time);
+            PlayerPrefs.SetFloat("Time" + scene_num, 0);
 
-
-            // 최고 Level 갱신
-            if (PlayerPrefs.HasKey("BestLevel"))  //  키값이 있으면 
-            {
-                int best_level = PlayerPrefs.GetInt("BestLevel");
-                if (best_level <= scene_num)  // 최고기록 갱신
-                    PlayerPrefs.SetInt("BestLevel", scene_num + 1);
-            }
-            else
-            {
+            // BestLevel 갱신
+            int best_level = PlayerPrefs.GetInt("BestLevel");
+            if (best_level <= scene_num)  // 최고기록 갱신
                 PlayerPrefs.SetInt("BestLevel", scene_num + 1);
-            }
+
 
             // Dev 끄기
             Player.SetActive(false);

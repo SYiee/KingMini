@@ -20,6 +20,7 @@ public class Esc_UI : MonoBehaviour
         scenenum = SceneManager.GetActiveScene().buildIndex;
         text_name.text = name[SceneManager.GetActiveScene().buildIndex - 2];
         time = PlayerPrefs.GetFloat("Time" + scenenum);
+        Cursor.visible = false;
     }
 
     // Update is called once per frame

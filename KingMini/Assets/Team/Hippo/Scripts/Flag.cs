@@ -5,6 +5,8 @@ using UnityEngine;
 public class Flag : MonoBehaviour
 {
     Animation anim;
+    bool first = true;
+    GameObject player = null;
 
     private Quaternion rot;
 
@@ -14,24 +16,23 @@ public class Flag : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.tag == "Player")
+        if(first && other.gameObject.tag == "Player")
         {
             anim.Play("FlagAnim");
+            first = false;
         }
     }
 
-    GameObject player = null;
+    
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Player")
         {
-            rot.x = collision.transform.localRotation.x;
-            rot.y = collision.transform.localRotation.y;
-            rot.z = collision.transform.localRotation.z;
 
             if (player == null)
                 player = collision.gameObject;
             player.transform.parent.SetParent(transform);
+            player.transform.rotation = Quaternion.Euler(new Vector3(0, player.transform.localRotation.y, 0));
         }
     }
 
@@ -40,7 +41,8 @@ public class Flag : MonoBehaviour
 
         if (collision.gameObject.tag == "Player")
         {
-            collision.transform.rotation = Quaternion.Euler(new Vector3(rot.x, rot.y, rot.z));
+            player.transform.rotation = Quaternion.Euler(new Vector3(0, player.transform.localRotation.y, 0));
+
         }
     }
 

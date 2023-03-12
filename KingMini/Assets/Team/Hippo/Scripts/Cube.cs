@@ -20,6 +20,7 @@ public class Cube : MonoBehaviour
 
             if (first)
             {
+                other.GetComponentInChildren<damage_obj>()?.Die();
                 AudioManager.instance.GetComponent<AudioSource>().PlayOneShot(sound);
                 first = false;
             }

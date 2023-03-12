@@ -16,6 +16,7 @@ TagManager:
   - WhiteBall
   - 3dPrinter
   - FlashCamera
+  - RedBall
   layers:
   - Default
   - TransparentFX

@@ -121,6 +121,7 @@ Transform:
   - {fileID: 2095802037}
   - {fileID: 7578645594870972671}
   - {fileID: 7578645595201346587}
+  - {fileID: 6239522638569161316}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -236,6 +237,8 @@ MonoBehaviour:
   - {fileID: 2139968250870444204}
   RedBall2: {fileID: 0}
   Sound: {fileID: 8300000, guid: 2592d43cc0f929e4eb87f0a85120919c, type: 3}
+  ball_count: 0
+  sound_start: 0
 --- !u!82 &259621512442047825
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1005,6 +1008,65 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!1 &5499626416411678753
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6239522638569161316}
+  - component: {fileID: 6673657224431871163}
+  - component: {fileID: 946377649384311701}
+  m_Layer: 0
+  m_Name: SoundTrigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6239522638569161316
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5499626416411678753}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.313, y: 0.56, z: -0.066}
+  m_LocalScale: {x: 1.0406, y: 0.26181, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 816153302861874035}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &6673657224431871163
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5499626416411678753}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &946377649384311701
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5499626416411678753}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a6dcf4d7ceee6b4489ec9f393c6718c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PocketBall: {fileID: 812792879314711911}
 --- !u!1 &5794578024721607713
 GameObject:
   m_ObjectHideFlags: 0
@@ -2189,6 +2251,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1114475099796392128, guid: 5060293116cb6154ba01e90088f62d29,
         type: 3}
+      propertyPath: m_Mass
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1114475099796392128, guid: 5060293116cb6154ba01e90088f62d29,
+        type: 3}
       propertyPath: m_Constraints
       value: 4
       objectReference: {fileID: 0}
@@ -2272,6 +2339,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: P_Ball1
       objectReference: {fileID: 0}
+    - target: {fileID: 2385814053102560731, guid: 5060293116cb6154ba01e90088f62d29,
+        type: 3}
+      propertyPath: m_TagString
+      value: RedBall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5060293116cb6154ba01e90088f62d29, type: 3}
 --- !u!4 &7881796862334579244 stripped
@@ -2293,6 +2365,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4516869793663732413}
     m_Modifications:
+    - target: {fileID: 1114475099796392128, guid: 5060293116cb6154ba01e90088f62d29,
+        type: 3}
+      propertyPath: m_Mass
+      value: 1.2
+      objectReference: {fileID: 0}
     - target: {fileID: 1114475099796392128, guid: 5060293116cb6154ba01e90088f62d29,
         type: 3}
       propertyPath: m_Constraints
@@ -2383,6 +2460,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 2385814053102560731, guid: 5060293116cb6154ba01e90088f62d29,
+        type: 3}
+      propertyPath: m_TagString
+      value: RedBall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5060293116cb6154ba01e90088f62d29, type: 3}
 --- !u!1 &8428272946645194104 stripped
@@ -2404,6 +2486,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4516869793663732413}
     m_Modifications:
+    - target: {fileID: 7536586803117175503, guid: f528956b80aa0314db182a7e51cf1734,
+        type: 3}
+      propertyPath: m_Mass
+      value: 1.2
+      objectReference: {fileID: 0}
     - target: {fileID: 7536586803117175503, guid: f528956b80aa0314db182a7e51cf1734,
         type: 3}
       propertyPath: m_Constraints
@@ -2489,6 +2576,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: P_Ball2 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8532622364701796625, guid: f528956b80aa0314db182a7e51cf1734,
+        type: 3}
+      propertyPath: m_TagString
+      value: RedBall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f528956b80aa0314db182a7e51cf1734, type: 3}
 --- !u!1 &2562690520861983014 stripped
@@ -2510,6 +2602,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4516869793663732413}
     m_Modifications:
+    - target: {fileID: 7536586803117175503, guid: f528956b80aa0314db182a7e51cf1734,
+        type: 3}
+      propertyPath: m_Mass
+      value: 1.2
+      objectReference: {fileID: 0}
     - target: {fileID: 7536586803117175503, guid: f528956b80aa0314db182a7e51cf1734,
         type: 3}
       propertyPath: m_Constraints
@@ -2594,6 +2691,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: P_Ball2 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8532622364701796625, guid: f528956b80aa0314db182a7e51cf1734,
+        type: 3}
+      propertyPath: m_TagString
+      value: RedBall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f528956b80aa0314db182a7e51cf1734, type: 3}
@@ -2808,6 +2910,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7536586803117175503, guid: f528956b80aa0314db182a7e51cf1734,
         type: 3}
+      propertyPath: m_Mass
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7536586803117175503, guid: f528956b80aa0314db182a7e51cf1734,
+        type: 3}
       propertyPath: m_Constraints
       value: 4
       objectReference: {fileID: 0}
@@ -2895,6 +3002,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8532622364701796625, guid: f528956b80aa0314db182a7e51cf1734,
+        type: 3}
+      propertyPath: m_TagString
+      value: RedBall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f528956b80aa0314db182a7e51cf1734, type: 3}

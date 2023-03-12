@@ -13,11 +13,14 @@ public class PocketBall_Hole : MonoBehaviour
         {
             Debug.Log("»ç¸Á");
             Destroy(other.gameObject);
+         //   PocketBall.GetComponent<PocketBall>().ball_count -= 1;
+            
         }
-        if (other.tag == "Obstacle")
+        if (other.tag == "RedBall")
         {
             Destroy(other.gameObject);
             PocketBall.GetComponent<PocketBall>().RedBalls.Remove(other.gameObject);
+            PocketBall.GetComponent<PocketBall>().ball_count -= 1;
         }
         if(other.tag == "WhiteBall")
         {

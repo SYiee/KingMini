@@ -37,6 +37,7 @@ public class MainScene : MonoBehaviour
     public GameObject Continue_Btn;
     public GameObject MainUI;
     public GameObject ContinueUI;
+    public GameObject BlackUI;
 
 
     [Header("Sound Manager")]
@@ -65,22 +66,7 @@ public class MainScene : MonoBehaviour
 
     private void Update()
     {
-        // 제목 트월킹
-        //if (time < 0.7f)
-        //{
-        //    Title.transform.position = Title.transform.position + new Vector3(0, 0.3f, 0);
-        //   // print(time);
-        //}
-        //else
-        //{
-        //    Title.transform.position = Title.transform.position + new Vector3(0, -0.3f, 0);
-        //    if (time > 1.4f)
-        //    {
-        //        time = 0;
-        //    }
-        //}
 
-        //time += Time.deltaTime;
     }
 
     public void NewGame()  // 새로운 게임 시작
@@ -98,7 +84,9 @@ public class MainScene : MonoBehaviour
         }
         PlayerPrefs.SetInt("Level", 2);
         PlayerPrefs.SetInt("BestLevel", 2);
-        
+
+
+        GameObject fade = Instantiate(BlackUI, new Vector3(1000, 700, 0), Quaternion.identity, GameObject.Find("MainScene").transform);
 
         //bgm reset
         Destroy(soundmanager);
@@ -180,7 +168,6 @@ public class MainScene : MonoBehaviour
 
             //bgm reset
             Destroy(soundmanager);
-
             SceneManager.LoadScene(scene);
        // }
 

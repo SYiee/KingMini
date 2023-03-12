@@ -1626,6 +1626,7 @@ MonoBehaviour:
   - {fileID: 7555009152618072643}
   - {fileID: 9075567315892056126}
   text_name: {fileID: 5271768173570157551}
+  time: 0
   name:
   - Office Room
   - Storage
@@ -1635,7 +1636,7 @@ MonoBehaviour:
   - Server Room
   - Multipurpose Room
   - Hell Room
-  - Kitchen & Living Room
+  - Living Room
 --- !u!1 &2265243945006080628
 GameObject:
   m_ObjectHideFlags: 0

@@ -615,6 +615,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SkipBtn: {fileID: 1136904812}
   FadeInUI: {fileID: 85620490142069564, guid: fadaa69e519725f45936c3914f3491a9, type: 3}
+  BlackUI: {fileID: 3509392678519395967, guid: f4c4ba3c8f99ee444952c372e00ea007, type: 3}
 --- !u!1 &973055557
 GameObject:
   m_ObjectHideFlags: 0

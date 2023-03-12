@@ -10,6 +10,8 @@ public class PocketBall : MonoBehaviour
 
     AudioSource source;
     public AudioClip Sound;
+    public int ball_count;
+    public bool sound_start;
 
     Transform Target1;
     Transform Target2;
@@ -20,13 +22,17 @@ public class PocketBall : MonoBehaviour
     {
         white = WhiteBall.GetComponent<Rigidbody>();
         source = FindObjectOfType<AudioSource>();
+        ball_count = RedBalls.Count;
         StartCoroutine("moveBall");
     }
 
     IEnumerator moveBall()
     {
-        while (true)
+        while (ball_count != 0)
         {
+            // 당구공 소리
+            if (sound_start)
+                source.PlayOneShot(Sound);
 
             int rand = Random.Range(0, RedBalls.Count);
             while (RedBalls[rand] == null || RedBalls[rand].activeSelf == false) {
@@ -35,10 +41,11 @@ public class PocketBall : MonoBehaviour
 
             Vector3 l_vector = RedBalls[rand].transform.position - WhiteBall.transform.position;
             WhiteBall.transform.rotation = Quaternion.LookRotation(l_vector).normalized;
-            source.PlayOneShot(Sound);
+
+            
             // WhiteBall.transform.LookAt(RedBall.transform);
             white.AddForce(l_vector.normalized * 2000f, ForceMode.Force);
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(1.5f);
         }
     }
 

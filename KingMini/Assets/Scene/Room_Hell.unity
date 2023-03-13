@@ -3499,6 +3499,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1648097663735547087, guid: 78e68651e09151f40b2d80d32ef78bd1,
         type: 3}
+      propertyPath: useContinuousSprint
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1648097663735547087, guid: 78e68651e09151f40b2d80d32ef78bd1,
+        type: 3}
       propertyPath: freeSpeed.runningSpeed
       value: 3
       objectReference: {fileID: 0}

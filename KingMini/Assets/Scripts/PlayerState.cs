@@ -15,6 +15,6 @@ public class PlayerState : MonoBehaviour
 
     private void Update()
     {
-        print(state);
+        //print(state);
     }
 }

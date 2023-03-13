@@ -66,7 +66,7 @@ public class damage_obj : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
-        print(other.gameObject.tag);
+        //print(other.gameObject.tag);
         if (is_death == false && other.gameObject.tag == "Obstacle")
         {
             Die();

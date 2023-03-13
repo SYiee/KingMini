@@ -272,6 +272,7 @@ namespace Invector.vCharacterController
 
             targetVelocity.y = _rigidbody.velocity.y;
             _rigidbody.velocity = Vector3.Lerp(_rigidbody.velocity, targetVelocity, airSmooth * Time.deltaTime);
+
         }
 
         protected virtual bool jumpFwdCondition
@@ -313,6 +314,7 @@ namespace Invector.vCharacterController
                     if (!isJumping)
                     {
                         _rigidbody.AddForce(transform.up * extraGravity * Time.deltaTime, ForceMode.VelocityChange);
+
                     }
                 }
                 else if (!isJumping)
